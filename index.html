@@ -198,7 +198,10 @@ html, body { background: var(--bg); color: var(--ink); font-family: var(--sans);
 @media (max-width: 600px) {
   .headline-num .big { font-size: 46px; }
   .statement h1 { font-size: 19px; }
-  .stat { min-width: 45%; }
+  .stat-strip { flex-direction: column; }
+  .stat { width: 100%; border-left: none !important; padding-left: 0 !important; padding-top: 16px; padding-bottom: 16px; }
+  .qbtn { padding: 8px 0 12px; }
+  .ftab { padding: 0 0 16px; }
 }
 </style>
 </head>

@@ -6,453 +6,347 @@
 <title>Статистика закрытого сообщества Рустама Васильевича</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700;800&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@500;600;700;800&family=Onest:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
   --bg: #0a0b18;
   --bg-2: #12142a;
-  --black: #050508;
-  --black-2: #15172d;
+  --line: #262a46;
+  --line-d: #1c1f38;
   --lime: #f0d0b4;
   --lime-2: #cf9f74;
   --lime-ink: #7a5238;
-  --gold-cream: #f7e6d5;
-  --chrome-1: #d7dae0;
   --ink: #efe9e0;
-  --on-dark: #f5eee5;
   --muted: #95929e;
   --muted-d: #a6a4b6;
-  --line: #262a46;
-  --line-d: #1c1f38;
   --coral: #e0654c;
-  --coral-soft: #e8846a;
-  --white: #161a32;
-  --disp: 'Unbounded', system-ui, sans-serif;
-  --sans: 'Manrope', system-ui, -apple-system, sans-serif;
-  --mono: 'JetBrains Mono', ui-monospace, monospace;
-  --r-lg: 30px;
-  --r-md: 22px;
-  --r-sm: 16px;
+  --disp: 'Golos Text', system-ui, sans-serif;
+  --sans: 'Onest', system-ui, -apple-system, sans-serif;
+  --mono: 'IBM Plex Mono', ui-monospace, monospace;
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
-html, body {
-  background: var(--bg); color: var(--ink);
-  font-family: var(--sans); font-weight: 400; font-size: 15px; line-height: 1.5;
-  min-height: 100vh; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
-}
-body { padding: 0; }
-.wrap { max-width: 1156px; margin: 0 auto; padding: 18px 18px 0; }
+html, body { background: var(--bg); color: var(--ink); font-family: var(--sans); font-weight: 400; font-size: 15px; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+.wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px 60px; }
 .tnum { font-variant-numeric: tabular-nums lining-nums; }
-.blob { position: absolute; pointer-events: none; z-index: 0; filter: drop-shadow(0 14px 30px rgba(0,0,0,0.22)); }
-.nav { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 14px; flex-wrap: wrap; }
-.nav-side { display: flex; gap: 4px; align-items: center; flex-wrap: wrap; }
-.nav-brand { display: flex; align-items: center; gap: 9px; background: var(--black); color: var(--on-dark); border-radius: 999px; padding: 11px 20px; font-family: var(--disp); font-weight: 600; font-size: 15px; letter-spacing: -0.01em; }
-.nav-brand .gem { width: 20px; height: 20px; border-radius: 6px; background: var(--lime); display: grid; place-items: center; color: var(--lime-ink); font-size: 11px; }
-.nav-link { font-size: 13px; font-weight: 600; color: var(--muted); background: var(--white); border: 1px solid var(--line); border-radius: 999px; padding: 10px 16px; cursor: pointer; transition: all .16s ease; font-family: var(--sans); }
-.nav-link:hover { border-color: var(--black); color: var(--ink); }
-.nav-link.active { background: var(--black); color: var(--lime); border-color: var(--black); }
-.nav-link .c { font-family: var(--mono); font-size: 10px; opacity: .7; margin-left: 5px; }
-.nav-cta { font-size: 12px; font-weight: 700; color: var(--lime-ink); background: var(--lime); border-radius: 999px; padding: 11px 17px; display: inline-flex; align-items: center; gap: 7px; }
-.nav-cta .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--black); }
 [hidden] { display: none !important; }
 
-.hero2 { display: grid; grid-template-columns: 1.04fr 0.96fr; gap: 14px; margin-bottom: 14px; }
-.hero-dark { position: relative; overflow: hidden; background: var(--black); border-radius: var(--r-lg); padding: 36px 36px 32px; display: flex; flex-direction: column; }
-.hero-chip { align-self: flex-start; display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 600; color: var(--lime-ink); background: var(--lime); padding: 6px 14px; border-radius: 999px; margin-bottom: 24px; }
-.hero-h { font-family: var(--disp); font-weight: 700; font-size: clamp(30px,4.4vw,46px); line-height: 1.02; letter-spacing: -0.03em; color: var(--on-dark); }
-.hero-h .lime { color: var(--lime); }
-.hero-big { font-family: var(--disp); font-weight: 800; font-size: clamp(54px,7.5vw,84px); line-height: 0.9; letter-spacing: -0.04em; color: var(--lime); margin: 22px 0 4px; }
-.hero-big .pct { font-size: 0.46em; }
-.hero-d-lede { font-size: 13.5px; color: var(--muted-d); max-width: 380px; line-height: 1.6; margin-bottom: 26px; }
-.hero-d-lede b { color: var(--on-dark); font-weight: 700; }
-.proof { display: flex; align-items: center; gap: 12px; margin-top: auto; }
-.avstack { display: flex; }
-.av { width: 32px; height: 32px; border-radius: 50%; border: 2px solid var(--black); margin-left: -10px; display: grid; place-items: center; font-family: var(--disp); font-weight: 600; font-size: 12px; color: var(--black); overflow: hidden; }
-.av:first-child { margin-left: 0; }
-.proof .pt { font-size: 12px; color: var(--muted-d); line-height: 1.4; }
-.proof .pt b { color: var(--on-dark); font-weight: 700; }
+/* topbar */
+.topbar { display: flex; align-items: center; justify-content: space-between; padding-top: 26px; margin-bottom: 44px; flex-wrap: wrap; gap: 14px; }
+.brand { display: flex; align-items: center; gap: 10px; }
+.brand .mark { width: 24px; height: 24px; border: 1.5px solid var(--lime); display: grid; place-items: center; font-family: var(--mono); font-weight: 700; font-size: 9.5px; color: var(--lime); flex-shrink: 0; }
+.brand .name { font-family: var(--disp); font-weight: 600; font-size: 14px; color: var(--ink); }
+.tabs { display: flex; gap: 26px; border-bottom: 1px solid var(--line); }
+.tab { font-family: var(--mono); font-size: 12px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); background: none; border: none; border-bottom: 2px solid transparent; padding: 0 0 15px; cursor: pointer; margin-bottom: -1px; transition: color .15s ease; }
+.tab:hover { color: var(--ink); }
+.tab.active { color: var(--ink); border-bottom-color: var(--lime); }
+.meta-period { font-family: var(--mono); font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
 
-.hero-media { position: relative; overflow: hidden; border-radius: var(--r-lg); background: var(--black-2); border: 1px solid var(--line-d); min-height: 420px; display: flex; flex-direction: column; padding: 26px 28px 22px; }
-.curvepanel .cp-head { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 6px; }
-.curvepanel .cp-t { font-size: 12px; font-weight: 600; color: var(--muted-d); text-transform: uppercase; letter-spacing: 0.05em; }
-.curvepanel .cp-r { font-family: var(--mono); font-size: 12px; color: var(--lime); }
-.curvepanel .curve { flex: 1; display: flex; align-items: center; min-height: 0; }
-.curvepanel .curve svg { width: 100%; height: auto !important; max-height: 100%; }
-.curve-x { display: flex; justify-content: space-between; margin-top: 9px; font-family: var(--mono); font-size: 10px; color: var(--muted-d); text-transform: uppercase; }
+/* statement header */
+.eyebrow2 { font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--lime-2); margin-bottom: 16px; }
+.statement h1 { font-family: var(--disp); font-weight: 500; font-size: clamp(20px,2.6vw,27px); line-height: 1.35; letter-spacing: -0.005em; color: var(--muted-d); max-width: 620px; margin-bottom: 30px; }
+.statement h1 b { font-weight: 700; color: var(--ink); }
+.headline-num { display: flex; align-items: flex-end; gap: 24px; flex-wrap: wrap; padding-bottom: 28px; border-bottom: 1px solid var(--line); margin-bottom: 40px; }
+.headline-num .big { font-family: var(--disp); font-weight: 700; font-size: clamp(50px,8.5vw,92px); letter-spacing: -0.03em; line-height: 0.9; color: var(--lime); }
+.headline-num .cap { font-size: 13px; color: var(--muted); max-width: 300px; line-height: 1.6; padding-bottom: 8px; }
+.headline-num .cap b { color: var(--ink); font-weight: 600; }
 
-.kcards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 14px; }
-.kc { border-radius: var(--r-md); padding: 24px 24px 22px; position: relative; overflow: hidden; min-height: 168px; display: flex; flex-direction: column; }
-.kc .kl { font-size: 12px; font-weight: 600; margin-bottom: auto; }
-.kc .kv { font-family: var(--disp); font-weight: 700; font-size: 46px; letter-spacing: -0.04em; line-height: 0.9; margin-top: 18px; }
-.kc .kv .of { font-size: 0.4em; font-weight: 500; opacity: 0.5; }
-.kc .kn { font-size: 12px; margin-top: 12px; }
-.kc.lime { background: var(--lime); color: var(--lime-ink); }
-.kc.lime .kn { color: var(--lime-ink); } .kc.lime .kn b { color: var(--lime-ink); }
-.kc.dark { background: var(--black); color: var(--on-dark); }
-.kc.dark .kv { color: var(--lime); } .kc.dark .kl { color: var(--muted-d); } .kc.dark .kn { color: var(--muted-d); } .kc.dark .kn b { color: var(--on-dark); }
-.kc.chrome { color: var(--ink); border: 1px solid var(--line); background: var(--white); }
-.kc.chrome .kl, .kc.light .kl { color: var(--muted); }
-.kc.chrome .kn, .kc.light .kn { color: var(--muted); } .kc.chrome .kn b { color: var(--ink); }
-.kc.light { background: var(--bg-2); color: var(--ink); border: 1px solid var(--line); }
-.kc.light .kn b { color: var(--ink); }
-.kc .blob-2 { width: 130px; right: -28px; bottom: -30px; opacity: 0.92; }
+/* ribbon curve */
+.ribbon { margin-bottom: 48px; }
+.ribbon-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; }
+.ribbon-t { font-family: var(--mono); font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
+.ribbon-r { font-family: var(--mono); font-size: 12px; color: var(--lime); }
+.ribbon svg { width: 100%; height: auto; display: block; }
+.ribbon-x { display: flex; justify-content: space-between; font-family: var(--mono); font-size: 10px; color: var(--muted); text-transform: uppercase; margin-top: 6px; }
 
-.manifesto { position: relative; text-align: center; padding: 70px 20px 60px; overflow: hidden; }
-.manifesto h2 { font-family: var(--disp); font-weight: 700; font-size: clamp(28px,4.6vw,48px); line-height: 1.04; letter-spacing: -0.03em; max-width: 760px; margin: 0 auto; position: relative; z-index: 2; }
-.manifesto h2 .lime-ink { background: var(--lime); color: var(--lime-ink); padding: 0 10px; border-radius: 8px; }
-.manifesto p { font-size: 14px; color: var(--muted); max-width: 480px; margin: 20px auto 26px; position: relative; z-index: 2; }
-.manifesto .mcta { position: relative; z-index: 2; display: inline-flex; align-items: center; gap: 9px; background: var(--black); color: var(--on-dark); border-radius: 999px; padding: 13px 24px; font-weight: 600; font-size: 14px; cursor: pointer; border: none; }
-.manifesto .mcta .ar { color: var(--lime); }
-.manifesto .blob-l { width: 280px; left: -70px; top: 40%; transform: translateY(-50%); }
-.manifesto .blob-r { width: 280px; right: -70px; top: 50%; transform: translateY(-50%) scaleX(-1); }
+/* stat strip */
+.stat-strip { display: flex; flex-wrap: wrap; margin-bottom: 52px; border-top: 1px solid var(--line); }
+.stat { flex: 1; min-width: 150px; padding: 22px 20px 20px 0; border-bottom: 1px solid var(--line); }
+.stat:not(:first-child) { border-left: 1px solid var(--line); padding-left: 20px; }
+.stat .s-l { font-family: var(--mono); font-size: 10px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin-bottom: 12px; }
+.stat .s-v { font-family: var(--disp); font-weight: 700; font-size: 30px; letter-spacing: -0.02em; color: var(--ink); line-height: 1; }
+.stat .s-v .of { font-size: 0.5em; color: var(--muted); font-weight: 500; }
+.stat .s-n { font-size: 11.5px; color: var(--muted); margin-top: 9px; }
+.stat .s-n b { color: var(--ink); font-weight: 600; }
 
-.pills-row { display: grid; grid-template-columns: 1.25fr 1fr 1fr 1fr; gap: 12px; }
-.pill-card { border-radius: 999px; padding: 30px 28px; min-height: 120px; display: flex; flex-direction: column; justify-content: center; position: relative; overflow: hidden; }
-.pill-card .pc-t { font-family: var(--disp); font-weight: 700; font-size: 20px; letter-spacing: -0.02em; line-height: 1; }
-.pill-card .pc-s { font-size: 11.5px; margin-top: 7px; }
-.pill-card.lime { background: var(--lime); color: var(--lime-ink); } .pill-card.lime .pc-s { color: var(--lime-ink); }
-.pill-card.dark { background: var(--black); color: var(--on-dark); } .pill-card.dark .pc-s { color: var(--muted-d); }
-.pill-card.dark .pc-t { color: var(--lime); }
-.pill-card.light { background: var(--white); border: 1px solid var(--line); color: var(--ink); } .pill-card.light .pc-s { color: var(--muted); }
-.pill-card.chrome { background: #cdd0d4; color: var(--black); }
-.pill-card.chrome .chrome-sheet { position: absolute; inset: 0; }
-.pill-card.chrome .pc-in { position: relative; z-index: 2; }
-.pill-card.chrome .pc-t { color: var(--black); } .pill-card.chrome .pc-s { color: #2a2a2a; }
+/* section */
+.section2 { margin-bottom: 56px; }
+.section2-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; margin-bottom: 22px; flex-wrap: wrap; }
+.section2-head h2 { font-family: var(--disp); font-weight: 600; font-size: 19px; letter-spacing: -0.01em; color: var(--ink); }
+.section2-head .sub2 { font-size: 12.5px; color: var(--muted); }
 
-.section { margin-top: 40px; }
-.sec-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; margin-bottom: 22px; flex-wrap: wrap; }
-.sec-head h2 { font-family: var(--disp); font-weight: 700; font-size: clamp(26px,3.4vw,38px); letter-spacing: -0.03em; line-height: 1; }
-.sec-head .sub { font-size: 13px; color: var(--muted); max-width: 320px; text-align: right; }
+/* callout */
+.callout { display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; padding: 22px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); margin-bottom: 56px; }
+.callout p { font-size: 13.5px; color: var(--muted); max-width: 540px; line-height: 1.65; }
+.callout p b { color: var(--ink); }
+.callout-btn { font-family: var(--mono); font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink); background: none; border: 1px solid var(--line); padding: 11px 18px; cursor: pointer; white-space: nowrap; transition: all .15s ease; }
+.callout-btn:hover { border-color: var(--lime); color: var(--lime); }
 
-.mgrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
-.mcard { border-radius: var(--r-md); padding: 24px; position: relative; overflow: hidden; min-height: 196px; display: flex; flex-direction: column; border: 1px solid var(--line); background: var(--white); }
-.mcard .mc-top { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: auto; }
-.mc-mo { font-family: var(--disp); font-weight: 600; font-size: 19px; letter-spacing: -0.02em; }
-.mc-mo .yr { display: block; font-family: var(--mono); font-size: 11px; font-weight: 400; color: var(--muted); margin-top: 3px; }
-.mc-arrow { width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--line); display: grid; place-items: center; font-size: 15px; flex-shrink: 0; }
-.mc-pnl { font-family: var(--disp); font-weight: 700; font-size: 40px; letter-spacing: -0.04em; line-height: 0.92; }
-.mc-pnl.pos { color: var(--ink); } .mc-pnl.neg { color: var(--coral); }
-.mc-bar { display: flex; height: 7px; border-radius: 999px; overflow: hidden; background: var(--bg-2); margin-top: 16px; }
-.mc-bar > i { height: 100%; } .mc-bar .w { background: var(--lime-2); } .mc-bar .b { background: #c9c4b6; } .mc-bar .l { background: var(--coral); }
-.mc-leg { font-family: var(--mono); font-size: 10.5px; color: var(--muted); margin-top: 9px; display: flex; gap: 12px; }
-.mc-n { font-family: var(--mono); font-size: 11px; color: var(--muted); margin-top: 5px; }
-.mcard.feat { background: var(--black); border-color: var(--black); }
-.mcard.feat .mc-mo { color: var(--on-dark); } .mcard.feat .mc-mo .yr { color: var(--muted-d); }
-.mcard.feat .mc-arrow { border-color: var(--line-d); color: var(--lime); }
-.mcard.feat .mc-pnl.pos { color: var(--lime); }
-.mcard.feat .mc-bar { background: var(--black-2); }
-.mcard.feat .mc-leg, .mcard.feat .mc-n { color: var(--muted-d); }
-.mcard.feat .badge { position: absolute; top: 22px; right: 64px; font-size: 10px; font-weight: 700; color: var(--lime-ink); background: var(--lime); padding: 3px 9px; border-radius: 999px; text-transform: uppercase; letter-spacing: 0.04em; }
-.mcard.feat .blob-2 { width: 120px; right: -24px; bottom: -34px; opacity: 0.5; }
+/* monthly list */
+.month-list { border-top: 1px solid var(--line); }
+.month-row { display: grid; grid-template-columns: 96px 1fr 130px 90px; gap: 18px; align-items: center; padding: 17px 0; border-bottom: 1px solid var(--line); }
+.month-row.best { background: var(--bg-2); }
+.month-row .m-name { font-family: var(--disp); font-weight: 600; font-size: 15px; color: var(--ink); padding-left: 4px; }
+.month-row.best .m-name { padding-left: 12px; }
+.month-row .m-name .yr { display: block; font-family: var(--mono); font-size: 10px; font-weight: 400; color: var(--muted); margin-top: 3px; }
+.month-row .m-tag { font-family: var(--mono); font-size: 9px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--lime); display: block; margin-top: 4px; }
+.month-row .m-bar { display: flex; height: 4px; background: var(--line-d); }
+.month-row .m-bar i { height: 100%; }
+.month-row .m-bar .w { background: var(--lime); } .month-row .m-bar .b { background: var(--muted-d); } .month-row .m-bar .l { background: var(--coral); }
+.month-row .m-leg { font-family: var(--mono); font-size: 10px; color: var(--muted); margin-top: 8px; }
+.month-row .m-pnl { font-family: var(--disp); font-weight: 700; font-size: 19px; text-align: right; padding-right: 4px; }
+.month-row.best .m-pnl { padding-right: 12px; }
+.month-row .m-pnl.pos { color: var(--ink); } .month-row .m-pnl.neg { color: var(--coral); }
+.month-row .m-arrow { font-family: var(--mono); font-size: 11px; color: var(--muted); text-align: right; margin-top: 4px; padding-right: 4px; }
 
-.two { display: grid; grid-template-columns: 1.2fr 1fr; gap: 14px; align-items: stretch; }
-.panel { background: var(--white); border: 1px solid var(--line); border-radius: var(--r-md); padding: 28px; }
-.panel.dark { background: var(--black); border-color: var(--black); color: var(--on-dark); }
-.panel h3 { font-family: var(--disp); font-weight: 600; font-size: 19px; letter-spacing: -0.02em; margin-bottom: 4px; }
-.panel.dark h3 { color: var(--on-dark); }
-.panel .ph { font-size: 12.5px; color: var(--muted); margin-bottom: 22px; }
-.panel.dark .ph { color: var(--muted-d); }
+/* two-column instruments/outcomes */
+.two2 { display: grid; grid-template-columns: 1.15fr 1fr; gap: 44px; }
+.two2 h3 { font-family: var(--disp); font-weight: 600; font-size: 15px; color: var(--ink); margin-bottom: 4px; }
+.two2 .ph2 { font-size: 11.5px; color: var(--muted); margin-bottom: 20px; }
+.ins-row { display: grid; grid-template-columns: 96px 1fr 62px; gap: 14px; align-items: center; padding: 12px 0; border-bottom: 1px solid var(--line); }
+.ins-row:last-child { border-bottom: none; }
+.ins-name { font-family: var(--mono); font-size: 12px; font-weight: 600; color: var(--ink); }
+.ins-name .sub2b { display: block; font-size: 10px; color: var(--muted); font-weight: 400; margin-top: 2px; }
+.ins-track { height: 3px; background: var(--line); position: relative; }
+.ins-fill { position: absolute; left: 0; top: 0; height: 100%; }
+.ins-fill.pos { background: var(--lime); } .ins-fill.neg { background: var(--coral); }
+.ins-pct { font-family: var(--mono); font-size: 12px; font-weight: 700; text-align: right; }
+.ins-pct.pos { color: var(--ink); } .ins-pct.neg { color: var(--coral); }
 
-.irow { display: grid; grid-template-columns: 116px 1fr 58px; gap: 16px; align-items: center; padding: 13px 0; border-bottom: 1px solid var(--line); }
-.irow:last-child { border-bottom: none; }
-.itk { font-family: var(--mono); font-size: 13px; font-weight: 500; }
-.itk .sub { display: block; font-size: 10px; color: var(--muted); font-weight: 400; margin-top: 2px; }
-.itrack { height: 8px; background: var(--bg-2); border-radius: 999px; position: relative; overflow: hidden; }
-.ifill { position: absolute; top: 0; left: 0; height: 100%; border-radius: 999px; width: 0; transition: width 0.8s cubic-bezier(0.2,0.8,0.3,1); }
-.ifill.pos { background: var(--lime); } .ifill.neg { background: var(--coral); }
-.ip { font-family: var(--mono); font-size: 13px; font-weight: 700; text-align: right; }
-.ip.pos { color: var(--ink); } .ip.neg { color: var(--coral); }
+.outcome-bar { display: flex; height: 7px; margin-bottom: 18px; }
+.outcome-bar i { height: 100%; }
+.outcome-row { display: grid; grid-template-columns: 8px 1fr auto auto; gap: 11px; align-items: center; padding: 9px 0; border-bottom: 1px solid var(--line); font-size: 12.5px; }
+.outcome-row:last-child { border-bottom: none; }
+.outcome-sq { width: 8px; height: 8px; }
+.outcome-row .oc2 { font-family: var(--mono); font-weight: 700; color: var(--ink); }
+.outcome-row .op2 { font-family: var(--mono); font-size: 11px; color: var(--muted); width: 34px; text-align: right; }
+.takes2 { margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--line); }
+.takes2 .tkh2 { font-family: var(--mono); font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin-bottom: 13px; }
+.tk-row { display: grid; grid-template-columns: 60px 1fr 26px; gap: 10px; align-items: center; padding: 6px 0; }
+.tk-row .tkl2 { font-family: var(--mono); font-size: 11px; color: var(--muted); }
+.tk-track { height: 3px; background: var(--line); position: relative; }
+.tk-fill { position: absolute; left: 0; top: 0; height: 100%; background: var(--lime); }
+.tk-n { font-family: var(--mono); font-size: 10.5px; color: var(--muted); text-align: right; }
 
-.oseg { display: flex; height: 14px; border-radius: 999px; overflow: hidden; background: var(--black-2); margin-bottom: 20px; }
-.oseg > i { height: 100%; transition: width 0.8s cubic-bezier(0.2,0.8,0.3,1); width: 0; }
-.oseg .s-win { background: var(--lime); } .oseg .s-be { background: #6b6a64; } .oseg .s-loss { background: var(--coral); }
-.orow { display: grid; grid-template-columns: 12px 1fr auto auto; gap: 12px; align-items: center; padding: 11px 0; border-bottom: 1px solid var(--line-d); font-size: 13.5px; }
-.orow:last-child { border-bottom: none; }
-.odot { width: 10px; height: 10px; border-radius: 3px; }
-.orow .on { color: var(--on-dark); }
-.orow .oc { font-family: var(--mono); font-size: 13px; font-weight: 700; color: var(--lime); }
-.orow .op { font-family: var(--mono); font-size: 11.5px; color: var(--muted-d); width: 40px; text-align: right; }
-.takes { margin-top: 22px; padding-top: 20px; border-top: 1px solid var(--line-d); }
-.tkh { font-size: 12px; color: var(--muted-d); margin-bottom: 15px; }
-.tkr { display: grid; grid-template-columns: 76px 1fr 28px; gap: 12px; align-items: center; padding: 6px 0; }
-.tkl { font-family: var(--mono); font-size: 11.5px; color: var(--on-dark); }
-.tkt { height: 6px; background: var(--black-2); border-radius: 999px; overflow: hidden; }
-.tkf { height: 100%; background: var(--lime); border-radius: 999px; width: 0; transition: width 0.8s cubic-bezier(0.2,0.8,0.3,1); }
-.tkn { font-family: var(--mono); font-size: 11px; color: var(--muted-d); text-align: right; }
+/* long/short diverging bar */
+.diverge-labels { display: flex; justify-content: space-between; margin-bottom: 16px; }
+.dv-side .dv-t { font-family: var(--mono); font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin-bottom: 7px; }
+.dv-side .dv-pnl { font-family: var(--disp); font-weight: 700; font-size: 28px; color: var(--ink); }
+.dv-side.right2 { text-align: right; }
+.diverge-bar { position: relative; height: 10px; background: var(--line); display: flex; }
+.dv-half { flex: 1; height: 100%; display: flex; }
+.dv-half.left2 { justify-content: flex-end; }
+.dv-half.right2 { justify-content: flex-start; }
+.dv-fill { height: 100%; }
+.dv-fill.long2 { background: var(--lime); } .dv-fill.short2 { background: var(--muted-d); }
+.diverge-mid { position: absolute; top: -5px; bottom: -5px; left: 50%; width: 1px; background: var(--ink); opacity: .5; }
+.diverge-meta { display: flex; justify-content: space-between; margin-top: 12px; font-family: var(--mono); font-size: 11px; color: var(--muted); }
 
-.dir2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-.dcard { border-radius: var(--r-md); padding: 30px; position: relative; overflow: hidden; min-height: 180px; }
-.dcard.long { background: var(--lime); color: var(--lime-ink); }
-.dcard.short { background: var(--black); color: var(--on-dark); }
-.dcard .dh { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; }
-.dcard .dar { font-family: var(--disp); font-size: 22px; font-weight: 700; }
-.dcard .dttl { font-family: var(--disp); font-weight: 600; font-size: 19px; }
-.dcard .dn { font-family: var(--mono); font-size: 11.5px; margin-left: auto; opacity: 0.7; }
-.dcard .dpnl { font-family: var(--disp); font-weight: 700; font-size: 52px; letter-spacing: -0.04em; line-height: 0.9; }
-.dcard.short .dpnl { color: var(--lime); }
-.dcard .dsub { font-size: 13px; margin-top: 14px; }
-.dcard.long .dsub { color: var(--lime-ink); } .dcard.long .dsub b { color: var(--lime-ink); }
-.dcard.short .dsub { color: var(--muted-d); } .dcard.short .dsub b { color: var(--on-dark); }
-.dcard .blob-2 { width: 120px; right: -30px; top: -30px; opacity: 0.55; }
+/* ledger table (trades tab) */
+.filterbar2 { display: flex; gap: 22px; flex-wrap: wrap; border-bottom: 1px solid var(--line); margin-bottom: 30px; }
+.ftab { font-family: var(--mono); font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); background: none; border: none; border-bottom: 2px solid transparent; padding: 0 0 13px; cursor: pointer; margin-bottom: -1px; }
+.ftab:hover { color: var(--ink); }
+.ftab.active { color: var(--ink); border-bottom-color: var(--lime); }
+.ftab .fc2 { font-size: 10px; opacity: .7; margin-left: 4px; }
 
-.tv-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; margin: 22px 0 22px; flex-wrap: wrap; }
-.tv-head h2 { font-family: var(--disp); font-weight: 700; font-size: clamp(28px,4vw,40px); letter-spacing: -0.03em; line-height: 1; }
-.tv-head .s { font-size: 13px; color: var(--muted); }
-.filterbar { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
-.fchip { font-family: var(--sans); font-size: 13px; font-weight: 600; color: var(--muted); background: var(--white); border: 1px solid var(--line); border-radius: 999px; padding: 9px 17px; cursor: pointer; transition: all 0.16s ease; }
-.fchip:hover { border-color: var(--black); color: var(--ink); }
-.fchip.active { background: var(--black); color: var(--lime); border-color: var(--black); }
-.fchip .fc { font-family: var(--mono); font-size: 10px; margin-left: 5px; opacity: 0.7; }
+.mblock2 { margin-bottom: 34px; }
+.mblock2-head { display: flex; align-items: baseline; gap: 14px; padding: 8px 0 12px; flex-wrap: wrap; }
+.mblock2-head h3 { font-family: var(--disp); font-weight: 600; font-size: 17px; color: var(--ink); }
+.mblock2-head .mh-n2 { font-family: var(--mono); font-size: 11px; color: var(--muted); }
+.mblock2-head .mh-pnl2 { font-family: var(--disp); font-weight: 700; font-size: 16px; margin-left: auto; }
+.mblock2-head .mh-pnl2.pos { color: var(--ink); } .mblock2-head .mh-pnl2.neg { color: var(--coral); }
 
-.mblock { margin-bottom: 26px; }
-.mblock-head { display: flex; align-items: baseline; gap: 14px; padding: 0 6px 12px; flex-wrap: wrap; }
-.mblock-head h3 { font-family: var(--disp); font-weight: 600; font-size: 22px; letter-spacing: -0.02em; }
-.mblock-head h3 .yr { font-family: var(--mono); font-size: 12px; color: var(--muted); font-weight: 400; margin-left: 8px; }
-.mblock-head .mh-n { font-family: var(--mono); font-size: 11.5px; color: var(--muted); }
-.mblock-head .mh-split { font-family: var(--mono); font-size: 10.5px; color: var(--muted); }
-.mblock-head .mh-split .w { color: var(--lime-2); } .mblock-head .mh-split .l { color: var(--coral); }
-.mblock-head .mh-pnl { font-family: var(--disp); font-weight: 700; font-size: 20px; margin-left: auto; letter-spacing: -0.02em; }
-.mh-pnl.pos { color: var(--ink); } .mh-pnl.neg { color: var(--coral); }
+.ledger-head2, .l-row { display: grid; grid-template-columns: 14px 68px 84px 64px 1fr 76px; gap: 14px; align-items: center; }
+.ledger-head2 { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 10px 0; font-family: var(--mono); font-size: 10px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); }
+.ledger-head2 .h-r { text-align: right; }
+.l-row { padding: 10px 0; border-bottom: 1px solid var(--line); font-size: 12.5px; transition: background .12s ease; }
+.l-row:hover { background: var(--bg-2); }
+.l-dot { width: 6px; height: 6px; justify-self: center; }
+.l-dot.take { background: var(--lime); } .l-dot.stop { background: var(--coral); } .l-dot.be { background: var(--muted-d); }
+.l-date2 { font-family: var(--mono); font-size: 11px; color: var(--muted); }
+.l-asset2 { font-family: var(--mono); font-size: 11.5px; font-weight: 700; color: var(--ink); }
+.l-dir2 { font-size: 11.5px; color: var(--muted); }
+.l-res2 { font-size: 12px; color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.l-pnl2 { font-family: var(--mono); font-size: 12px; font-weight: 700; text-align: right; }
+.l-pnl2.pos { color: var(--ink); } .l-pnl2.neg { color: var(--coral); } .l-pnl2.zero { color: var(--muted-d); }
 
-.tbl { background: var(--white); border: 1px solid var(--line); border-radius: var(--r-md); overflow: hidden; }
-.tbl-head { display: grid; grid-template-columns: 72px 100px 88px 1fr 72px; gap: 14px; padding: 13px 24px; font-size: 11px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; background: var(--bg-2); border-bottom: 1px solid var(--line); }
-.tbl-head .h-pnl { text-align: right; }
-.trow { display: grid; grid-template-columns: 72px 100px 88px 1fr 72px; gap: 14px; align-items: center; padding: 13px 24px 13px 21px; border-bottom: 1px solid var(--line); font-size: 13.5px; position: relative; transition: background 0.12s ease; }
-.trow:last-child { border-bottom: none; }
-.trow:hover { background: var(--bg); }
-.trow::before { content: ""; position: absolute; left: 0; top: 9px; bottom: 9px; width: 3px; border-radius: 0 3px 3px 0; }
-.trow.is-take::before { background: var(--lime-2); }
-.trow.is-stop::before { background: var(--coral); }
-.trow.is-be::before { background: #c9c4b6; }
-.t-date { font-family: var(--mono); font-size: 12px; color: var(--muted); }
-.t-asset { font-family: var(--mono); font-size: 12.5px; font-weight: 700; }
-.t-dir { display: inline-flex; align-items: center; gap: 6px; font-size: 12.5px; color: var(--ink); font-weight: 500; }
-.t-dir .ar { font-family: var(--disp); font-size: 12px; font-weight: 700; }
-.t-dir.long .ar { color: var(--lime-2); } .t-dir.short .ar { color: var(--coral); }
-.t-res { font-size: 13px; color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.t-pnl { font-family: var(--mono); font-size: 13px; font-weight: 700; text-align: right; }
-.t-pnl.pos { color: var(--ink); } .t-pnl.neg { color: var(--coral); } .t-pnl.zero { color: var(--muted-d); }
+/* calculator */
+.dep-row { display: flex; align-items: baseline; gap: 14px; border-bottom: 1px solid var(--line); padding-bottom: 16px; margin-bottom: 20px; }
+.dep-row span { font-family: var(--mono); color: var(--muted); font-size: 18px; }
+.dep-row input { flex: 1; background: none; border: none; outline: none; font-family: var(--disp); font-weight: 700; font-size: 28px; color: var(--ink); min-width: 0; }
+.dep-row input::-webkit-outer-spin-button, .dep-row input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+.quick2 { display: flex; gap: 22px; flex-wrap: wrap; margin-bottom: 30px; }
+.qbtn { font-family: var(--mono); font-size: 12px; color: var(--muted); background: none; border: none; border-bottom: 2px solid transparent; padding: 0 0 8px; cursor: pointer; }
+.qbtn:hover { color: var(--ink); }
+.qbtn.active { color: var(--lime); border-bottom-color: var(--lime); }
+.calc-note2 { font-size: 11.5px; color: var(--muted); line-height: 1.65; margin-top: 22px; max-width: 480px; }
 
-.footcta { margin-top: 16px; background: var(--black); border-radius: var(--r-lg) var(--r-lg) 0 0; padding: 28px 0 30px; position: relative; overflow: hidden; width: 100%; }
-.footcta .fc-meta { margin-bottom: 12px; }
-.footcta-in { max-width: 1156px; margin: 0 auto; padding: 0 18px; position: relative; z-index: 2; }
-.footcta .fc-meta { display: flex; align-items: center; justify-content: space-between; margin-top: 30px; padding-top: 22px; border-top: 1px solid var(--line-d); position: relative; z-index: 2; flex-wrap: wrap; gap: 14px; }
-.footcta .cp { font-size: 12px; color: var(--muted-d); }
-.footcta .fc-note { font-size: 11.5px; color: #5d5c57; margin-top: 16px; line-height: 1.6; max-width: 720px; position: relative; z-index: 2; }
-.footcta .fc-note b { color: var(--muted-d); }
-.footcta .blob-1 { width: 220px; right: 40px; bottom: -90px; opacity: 0.4; }
+/* footer */
+.site-foot { border-top: 1px solid var(--line); padding: 32px 0 10px; margin-top: 8px; }
+.site-foot .f-top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 16px; flex-wrap: wrap; gap: 10px; }
+.site-foot .f-brand { font-family: var(--disp); font-weight: 600; font-size: 12.5px; color: var(--muted); }
+.site-foot .f-note { font-size: 11.5px; color: var(--muted); line-height: 1.65; max-width: 780px; }
+.site-foot .f-note b { color: var(--muted-d); }
 
-/* --- calculator tab (same design tokens, new component) --- */
-.dep-input { display: flex; align-items: center; gap: 8px; background: var(--bg-2); border: 1px solid var(--line); border-radius: var(--r-sm); padding: 14px 18px; margin-top: 4px; }
-.dep-input span { font-family: var(--mono); font-weight: 700; color: var(--muted); font-size: 20px; }
-.dep-input input { flex: 1; border: none; background: transparent; outline: none; font-family: var(--disp); font-weight: 700; font-size: 24px; color: var(--ink); width: 100%; min-width: 0; }
-.dep-input input::-webkit-outer-spin-button, .dep-input input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
-.calc-note { font-size: 11.5px; color: var(--muted); line-height: 1.6; margin-top: 18px; }
-
-@media (max-width: 900px) {
-  .hero2 { grid-template-columns: 1fr; }
-  .hero-media { min-height: 340px; }
-  .pills-row { grid-template-columns: 1fr 1fr; }
-  .kcards { grid-template-columns: 1fr 1fr; }
-  .two { grid-template-columns: 1fr; }
-  .sec-head .sub { text-align: left; }
-  .mgrid { grid-template-columns: 1fr 1fr; }
+@media (max-width: 860px) {
+  .two2 { grid-template-columns: 1fr; gap: 40px; }
+  .month-row { grid-template-columns: 1fr 1fr; row-gap: 10px; }
+  .month-row .m-bar { grid-column: 1 / -1; order: 3; }
+  .month-row .m-leg { grid-column: 1 / -1; order: 4; }
+  .ledger-head2 .h-dir, .l-row .l-dir2 { display: none; }
+  .ledger-head2, .l-row { grid-template-columns: 12px 60px 74px 1fr 66px; }
 }
-@media (max-width: 560px) {
-  .nav { flex-wrap: wrap; gap: 8px; }
-  .nav-cta { display: none; }
-  .nav-brand { padding: 10px 15px; font-size: 14px; }
-  .nav-link { padding: 9px 13px; font-size: 12px; }
-  .manifesto { padding: 44px 8px; } .manifesto .blob-l, .manifesto .blob-r { width: 150px; opacity: 0.5; }
-  .pills-row { grid-template-columns: 1fr; }
-  .hero-dark { padding: 28px 22px; }
-  .kcards { gap: 10px; } .kc { min-height: 140px; padding: 18px; } .kc .kv { font-size: 36px; }
-  .dir2 { grid-template-columns: 1fr; }
-  .mgrid { grid-template-columns: 1fr; }
-  .tbl-head, .trow { grid-template-columns: 56px 84px 1fr 60px; gap: 9px; padding-left: 16px; padding-right: 16px; }
-  .tbl-head .h-dir, .trow .t-dir { display: none; }
-  .t-res { font-size: 12px; }
+@media (max-width: 600px) {
+  .headline-num .big { font-size: 46px; }
+  .statement h1 { font-size: 19px; }
+  .stat { min-width: 45%; }
 }
-@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
 </style>
 </head>
 <body>
 <div class="wrap">
-<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
-  <linearGradient id="chrome" x1="0" y1="0" x2="0.85" y2="1">
-    <stop offset="0%" stop-color="#ffffff"/><stop offset="10%" stop-color="#cfd4da"/>
-    <stop offset="20%" stop-color="#ffffff"/><stop offset="33%" stop-color="#5b6068"/>
-    <stop offset="46%" stop-color="#e4e7ea"/><stop offset="55%" stop-color="#2f333a"/>
-    <stop offset="63%" stop-color="#b9bec5"/><stop offset="74%" stop-color="#41454c"/>
-    <stop offset="86%" stop-color="#f2f4f6"/><stop offset="94%" stop-color="#787d85"/>
-    <stop offset="100%" stop-color="#dfe2e6"/>
-  </linearGradient>
-  <radialGradient id="chromeHi" cx="34%" cy="24%" r="42%">
-    <stop offset="0%" stop-color="#ffffff" stop-opacity="1"/><stop offset="55%" stop-color="#ffffff" stop-opacity="0"/>
-  </radialGradient>
-  <filter id="liquid"><feTurbulence type="fractalNoise" baseFrequency="0.011 0.018" numOctaves="2" seed="7" result="n"/>
-  <feDisplacementMap in="SourceGraphic" in2="n" scale="18" xChannelSelector="R" yChannelSelector="G"/></filter>
-</defs></svg>
 
-<div class="nav">
-  <div class="nav-side">
-    <div class="nav-brand"><span class="gem">◆</span>РВ</div>
-    <button class="nav-link active" data-view="overview">Обзор</button>
-    <button class="nav-link" data-view="trades">Все сделки</button>
-    <button class="nav-link" data-view="calc">Калькулятор</button>
+<div class="topbar">
+  <div class="brand"><span class="mark">РВ</span><span class="name">Статистика сообщества</span></div>
+  <div class="tabs">
+    <button class="tab active" data-view="overview">Обзор</button>
+    <button class="tab" data-view="trades">Все сделки</button>
+    <button class="tab" data-view="calc">Калькулятор</button>
   </div>
-  <div class="nav-side">
-    <span class="nav-cta"><span class="dot"></span>Апрель — Июль 2026</span>
-  </div>
+  <div class="meta-period">Апрель — Июль 2026</div>
 </div>
 
 <div id="view-overview">
-  <div class="hero2">
-    <div class="hero-dark">
-      <span class="hero-chip">↗ Приватный трек-рекорд</span>
-      <div class="hero-h">Мы фиксируем <span class="lime">каждую сделку</span> — и вот результат за <span id="heroMonthsWord">4 месяца</span></div>
-      <div class="hero-big tnum" id="heroBig">+0<span class="pct">%</span></div>
-      <div class="hero-d-lede" id="heroLede">Накопленная доходность по всем сделкам при фиксированном риске <b>1% на сделку</b>.</div>
-      <div class="proof">
-        <div class="avstack" id="avstack"></div>
-        <div class="pt" id="proofText"></div>
-      </div>
-    </div>
-    <div class="hero-media curvepanel">
-      <div class="cp-head">
-        <span class="cp-t">Кривая накопленной доходности</span>
-        <span class="cp-r tnum" id="curveRange">0 → +0%</span>
-      </div>
-      <div class="curve" id="curve"></div>
-      <div class="curve-x" id="curveX"></div>
+  <div class="statement">
+    <div class="eyebrow2">Журнал сделок закрытого сообщества</div>
+    <h1>Мы ведём учёт <b>каждой сделки</b> сообщества без исключений — вот результат за <span id="stMonthsWord">4 месяца</span> работы.</h1>
+    <div class="headline-num">
+      <div class="big tnum" id="heroBig">+0%</div>
+      <div class="cap" id="heroCap">Накопленный результат при фиксированном риске <b>1% на сделку</b>, без реинвестирования.</div>
     </div>
   </div>
 
-  <div class="kcards tnum" id="kcards"></div>
-
-  <div class="manifesto">
-    <svg class="blob blob-l" viewBox="0 0 200 200" data-blob="A"></svg>
-    <svg class="blob blob-r" viewBox="0 0 200 200" data-blob="C"></svg>
-    <h2>Никаких скриншотов и обещаний.<br>Только <span class="lime-ink">реальная статистика</span> по каждой сделке.</h2>
-    <p id="manifestoText"></p>
-    <button class="mcta" onclick="document.querySelector('.nav-link[data-view=trades]').click();">Открыть журнал сделок <span class="ar">↗</span></button>
-  </div>
-
-  <div class="pills-row tnum" id="pillsRow" style="margin-bottom:14px"></div>
-
-  <div class="section">
-    <div class="sec-head">
-      <h2>Помесячная<br>динамика</h2>
-      <span class="sub">Результат и состав сделок по каждому месяцу</span>
+  <div class="ribbon">
+    <div class="ribbon-head">
+      <span class="ribbon-t">Кривая накопленной доходности</span>
+      <span class="ribbon-r tnum" id="curveRange">0 → +0%</span>
     </div>
-    <div class="mgrid" id="mgrid"></div>
+    <div id="curve"></div>
+    <div class="ribbon-x" id="curveX"></div>
   </div>
 
-  <div class="section">
-    <div class="sec-head"><h2>Инструменты<br>и исходы</h2><span class="sub">Где сообщество зарабатывает и как закрывает сделки</span></div>
-    <div class="two">
-      <div class="panel">
+  <div class="stat-strip tnum" id="statStrip"></div>
+
+  <div class="callout">
+    <p id="calloutText"></p>
+    <button class="callout-btn" onclick="document.querySelector('.tab[data-view=trades]').click();">Журнал сделок →</button>
+  </div>
+
+  <div class="section2">
+    <div class="section2-head"><h2>Помесячная динамика</h2><span class="sub2">Результат и состав сделок по каждому месяцу</span></div>
+    <div class="month-list" id="monthList"></div>
+  </div>
+
+  <div class="section2">
+    <div class="section2-head"><h2>Инструменты и исходы</h2><span class="sub2">Где сообщество зарабатывает и как закрывает сделки</span></div>
+    <div class="two2">
+      <div>
         <h3>Лучшие инструменты</h3>
-        <div class="ph">по числу сделок · вклад в общий P&amp;L</div>
+        <div class="ph2">по числу сделок · вклад в общий P&amp;L</div>
         <div id="inst"></div>
       </div>
-      <div class="panel dark">
+      <div>
         <h3>Как закрывались</h3>
-        <div class="ph" id="oseghead">распределение всех исходов</div>
-        <div class="oseg" id="oseg"></div>
+        <div class="ph2" id="oseghead"></div>
+        <div class="outcome-bar" id="oseg"></div>
         <div id="olist"></div>
-        <div class="takes"><div class="tkh">Глубина прибыльных сделок</div><div id="takes"></div></div>
+        <div class="takes2"><div class="tkh2">Глубина прибыльных сделок</div><div id="takes"></div></div>
       </div>
     </div>
   </div>
 
-  <div class="section">
-    <div class="sec-head"><h2>Лонг / Шорт</h2><span class="sub">Ровная работа в обе стороны рынка</span></div>
-    <div class="dir2" id="dir2"></div>
+  <div class="section2">
+    <div class="section2-head"><h2>Long / Short</h2><span class="sub2">Ровная работа в обе стороны рынка</span></div>
+    <div class="diverge-labels">
+      <div class="dv-side left2"><div class="dv-t" id="dvLongT">↑ Лонг</div><div class="dv-pnl tnum" id="dvLongPnl">+0%</div></div>
+      <div class="dv-side right2"><div class="dv-t" id="dvShortT">Шорт ↓</div><div class="dv-pnl tnum" id="dvShortPnl">+0%</div></div>
+    </div>
+    <div class="diverge-bar">
+      <div class="dv-half left2"><div class="dv-fill long2" id="dvLongFill"></div></div>
+      <div class="diverge-mid"></div>
+      <div class="dv-half right2"><div class="dv-fill short2" id="dvShortFill"></div></div>
+    </div>
+    <div class="diverge-meta tnum" id="dvMeta"></div>
   </div>
 </div>
 
 <div id="view-trades" hidden>
-  <div class="tv-head"><h2>Журнал всех<br>сделок</h2><span class="s" id="tvHeadSub"></span></div>
-  <div class="filterbar" id="filterbar"></div>
+  <div class="statement" style="margin-bottom:10px;">
+    <div class="eyebrow2">Полный журнал</div>
+    <h1 style="margin-bottom:0;">Все сделки — <span id="tvTotal">212</span>, сгруппированы по месяцам.</h1>
+  </div>
+  <div style="height:28px;"></div>
+  <div class="filterbar2" id="filterbar"></div>
   <div id="trades-list"></div>
 </div>
 
 <div id="view-calc" hidden>
-  <div class="tv-head"><h2>Калькулятор<br>доходности</h2><span class="s">Проекция депозита при помесячном реинвестировании</span></div>
-  <div class="two">
-    <div class="panel">
-      <h3>Стартовый депозит</h3>
-      <div class="ph">Выберите сумму или введите свою</div>
-      <div class="dep-input"><span>$</span><input id="calcDeposit" type="number" value="1000" min="0" step="1" inputmode="decimal"></div>
-      <div class="filterbar" id="calcQuick" style="margin-top:14px;margin-bottom:0;">
-        <button class="fchip" data-v="500">$500</button>
-        <button class="fchip active" data-v="1000">$1 000</button>
-        <button class="fchip" data-v="2500">$2 500</button>
-        <button class="fchip" data-v="5000">$5 000</button>
-        <button class="fchip" data-v="10000">$10 000</button>
-      </div>
-      <p class="calc-note">Расчёт — проекция на основе статистики сообщества при пропорциональном масштабировании лота к текущему депозиту (реинвестирование помесячно). На вкладке «Обзор» указан агрегированный результат без реинвестирования — это отдельная методика. Прошлые результаты не гарантируют будущую доходность.</p>
-    </div>
-    <div class="panel dark curvepanel">
-      <div class="cp-head">
-        <span class="cp-t" id="calcHeroLabel">Депозит к концу июля</span>
-        <span class="cp-r tnum" id="calcDeltaValue">+$0 · +0%</span>
-      </div>
-      <div class="hero-big tnum" id="calcFinalValue" style="font-size:clamp(36px,5vw,58px);margin:8px 0 4px;">$0</div>
-      <div class="curve" id="calcCurve"></div>
-      <div class="curve-x" id="calcCurveX"></div>
-    </div>
+  <div class="statement" style="margin-bottom:10px;">
+    <div class="eyebrow2">Проекция</div>
+    <h1 style="margin-bottom:0;">Калькулятор доходности — сколько был бы депозит при помесячном реинвестировании.</h1>
+  </div>
+  <div style="height:28px;"></div>
+
+  <div class="dep-row"><span>$</span><input id="calcDeposit" type="number" value="1000" min="0" step="1" inputmode="decimal"></div>
+  <div class="quick2" id="calcQuick">
+    <button class="qbtn" data-v="500">$500</button>
+    <button class="qbtn active" data-v="1000">$1 000</button>
+    <button class="qbtn" data-v="2500">$2 500</button>
+    <button class="qbtn" data-v="5000">$5 000</button>
+    <button class="qbtn" data-v="10000">$10 000</button>
   </div>
 
-  <div class="section">
-    <div class="sec-head"><h2>По месяцам</h2><span class="sub">Баланс на конец каждого месяца</span></div>
-    <div class="panel">
-      <div id="calcTimeline"></div>
+  <div class="ribbon">
+    <div class="ribbon-head">
+      <span class="ribbon-t" id="calcHeroLabel">Депозит к концу июля</span>
+      <span class="ribbon-r tnum" id="calcDeltaValue">+$0 · +0%</span>
     </div>
+    <div class="headline-num" style="border:none;margin-bottom:14px;padding-bottom:0;">
+      <div class="big tnum" id="calcFinalValue" style="font-size:clamp(38px,6vw,60px);">$0</div>
+    </div>
+    <div id="calcCurve"></div>
+    <div class="ribbon-x" id="calcCurveX"></div>
   </div>
+
+  <div class="section2">
+    <div class="section2-head"><h2>По месяцам</h2><span class="sub2">Баланс на конец каждого месяца</span></div>
+    <div class="month-list" id="calcTimeline"></div>
+  </div>
+
+  <p class="calc-note2">Расчёт — проекция на основе статистики сообщества при пропорциональном масштабировании лота к текущему депозиту (реинвестирование помесячно). На вкладке «Обзор» указан агрегированный результат без реинвестирования — это отдельная методика. Прошлые результаты не гарантируют будущую доходность.</p>
 </div>
 
+<div class="site-foot">
+  <div class="f-top">
+    <span class="f-brand">РВ · Статистика сообщества</span>
+    <span class="f-brand" id="footCp">© 2026</span>
+  </div>
+  <div class="f-note" id="footNote"></div>
 </div>
 
-<div class="footcta">
-  <svg class="blob blob-1" viewBox="0 0 200 200" data-blob="D"></svg>
-  <div class="footcta-in">
-    <div class="fc-meta" style="margin-top:0;padding-top:0;border-top:none">
-      <span class="cp" id="footCp">© 2026 · Статистика закрытого сообщества</span>
-    </div>
-    <div class="fc-note" id="footNote"></div>
-  </div>
 </div>
 
 <script>
 const LEDGER = [{"date": "1.4.2026", "pair": "GBPUSD", "dir": "BUY", "result": "TP3", "points": 450, "pct": 2.74}, {"date": "1.4.2026", "pair": "XAUUSD", "dir": "BUY", "result": "TP4", "points": 2200, "pct": 1.54}, {"date": "2.4.2026", "pair": "XAUUSD", "dir": "SELL", "result": "TP2", "points": 2400, "pct": 1.68}, {"date": "2.4.2026", "pair": "EURUSD", "dir": "BUY", "result": "TP3", "points": 310, "pct": 1.94}, {"date": "6.4.2026", "pair": "USDJPY", "dir": "SELL", "result": "TP1", "points": 81, "pct": 0.1}, {"date": "6.4.2026", "pair": "XAUUSD", "dir": "BUY", "result": "TP3", "points": 2100, "pct": 1.47}, {"date": "7.4.2026", "pair": "EURUSD", "dir": "BUY", "result": "TP2", "points": 270, "pct": 1.69}, {"date": "7.4.2026", "pair": "XAUUSD", "dir": "BUY", "result": "TP2", "points": 1100, "pct": 0.77}, {"date": "8.4.2026", "pair": "XAUUSD", "dir": "SELL", "result": "TP4", "points": 5600, "pct": 3.92}, {"date": "8.4.2026", "pair": "USDCHF", "dir": "SELL", "result": "TP1", "points": 104, "pct": 0.51}, {"date": "9.4.2026", "pair": "XAUUSD", "dir": "BUY", "result": "TP4", "points": 3800, "pct": 2.66}, {"date": "9.4.2026", "pair": "USDCHF", "dir": "SELL", "result": "TP3", "points": 411, "pct": 2.0}, {"date": "10.4.2026", "pair": "XAUUSD", "dir": "BUY", "result": "TP4", "points": 2800, "pct": 1.96}, {"date": "10.4.2026", "pair": "USDCAD", "dir": "SELL", "result": "TP2", "points": 260, "pct": 3.06}, {"date": "13.4.2026", "pair": "EURUSD", "dir": "BUY", "result": "TP1", "points": 60, "pct": 0.37}, {"date": "13.4.2026", "pair": "XAUUSD", "dir": "BUY", "result": "TP2", "points": 900, "pct": 0.63}, {"date": "14.4.2026", "pair": "XAUUSD", "dir": "BUY", "result": "TP3", "points": 2300, "pct": 1.61}, {"date": "14.4.2026", "pair": "XAUUSD", "dir": "BUY", "result": "TP3", "points": 5000, "pct": 3.5}, {"date": "15.4.2026", "pair": "XAUUSD", "dir": "BUY", "result": "TP4", "points": 3000, "pct": 2.1}, {"date": "15.4.2026", "pair": "AUDUSD", "dir": "BUY", "result": "TP3", "points": 320, "pct": 0.4}, {"date": "16.4.2026", "pair": "EURUSD", "dir": "SELL", "result": "TP2", "points": 230, "pct": 1.44}, {"date": "16.4.2026", "pair": "XAUUSD", "dir": "SELL", "result": "TP4", "points": 3900, "pct": 2.73}, {"date": "17.4.2026", "pair": "XAUUSD", "dir": "BUY", "result": "SL", "points": -1500, "pct": -1.0}, {"date": "17.4.2026", "pair": "EURUSD", "dir": "BUY", "result": "SL", "points": -293, "pct": -1.0}, {"date": "20.4.2026", "pair": "XAUUSD", "dir": "BUY", "result": "TP4", "points": 2020, "pct": 1.41}, {"date": "20.4.2026", "pair": "USDJPY", "dir": "SELL", "result": "TP3", "points": 250, "pct": 0.31}, {"date": "21.4.2026", "pair": "GBPUSD", "dir": "SELL", "result": "TP3", "points": 303, "pct": 1.84}, {"date": "21.4.2026", "pair": "XAUUSD", "dir": "SELL", "result": "TP4", "points": 4100, "pct": 2.87}, {"date": "22.4.2026", "pair": "EURUSD", "dir": "BUY", "result": "SL", "points": -271, "pct": -1.0}, {"date": "22.04.2026", "pair": "XAUUSD", "dir": "BUY", "result": "TP1", "points": 800, "pct": 0.56}, {"date": "23.04.2026", "pair": "EURUSD", "dir": "SELL", "result": "TP3", "points": 187, "pct": 1.17}, {"date": "23.04.2026", "pair": "XAUUSD", "dir": "SELL", "result": "TP3", "points": 1900, "pct": 1.33}, {"date": "23.04.2026", "pair": "XAUUSD", "dir": "SELL", "result": "TP3", "points": 2000, "pct": 1.4}, {"date": "24.04.2026", "pair": "EURUSD", "dir": "SELL", "result": "SL", "points": -94, "pct": -1.0}, {"date": "24.04.2026", "pair": "XAUUSD", "dir": "SELL", "result": "TP2", "points": 1200, "pct": 0.84}, {"date": "27.04.2026", "pair": "USDCHF", "dir": "SELL", "result": "TP1", "points": 88, "pct": 0.43}, {"date": "27.04.2026", "pair": "XAUUSD", "dir": "BUY", "result": "SL", "points": -700, "pct": -1.0}, {"date": "28.04.2026", "pair": "USDCAD", "dir": "BUY", "result": "TP2", "points": 320, "pct": 3.76}, {"date": "28.04.2026", "pair": "AUDUSD", "dir": "SELL", "result": "TP3", "points": 540, "pct": 0.67}, {"date": "28.04.2026", "pair": "XAUUSD", "dir": "SELL", "result": "SL", "points": -3500, "pct": -1.0}, {"date": "29.04.2026", "pair": "XAUUSD", "dir": "SELL", "result": "TP3", "points": 2000, "pct": 1.4}, {"date": "29.04.2026", "pair": "GBPUSD", "dir": "SELL", "result": "TP2", "points": 291, "pct": 1.77}, {"date": "30.04.2026", "pair": "USDCHF", "dir": "SELL", "result": "TP2", "points": 164, "pct": 0.8}, {"date": "30.04.2026", "pair": "XAUUSD", "dir": "SELL", "result": "TP4", "points": 4500, "pct": 3.15}, {"date": "01.05.2026", "pair": "USDCAD", "dir": "BUY", "result": "SL", "points": -85, "pct": -1.0}, {"date": "01.05.2026", "pair": "XAUUSD", "dir": "SELL", "result": "SL", "points": -1200, "pct": -1.0}, {"date": "04.05.2026", "pair": "EURUSD", "dir": "BUY", "result": "SL", "points": -212, "pct": -1.0}, {"date": "04.05.2026", "pair": "XAUUSD", "dir": "BUY", "result": "TP1", "points": 600, "pct": 0.42}, {"date": "05.05.2026", "pair": "GBPUSD", "dir": "BUY", "result": "TP4", "points": 413, "pct": 2.51}, {"date": "05.05.2026", "pair": "XAUUSD", "dir": "BUY", "result": "TP4", "points": 3950, "pct": 2.76}, {"date": "06.05.2026", "pair": "XAUUSD", "dir": "SELL", "result": "SL", "points": -1000, "pct": -1.0}, {"date": "06.05.2026", "pair": "EURUSD", "dir": "BUY", "result": "SL", "points": -134, "pct": -1.0}, {"date": "07.05.2026", "pair": "USDCHF", "dir": "SELL", "result": "TP1", "points": 68, "pct": 0.33}, {"date": "07.05.2026", "pair": "XAUUSD", "dir": "BUY", "result": "TP4", "points": 2500, "pct": 1.75}, {"date": "08.05.2026", "pair": "XAUUSD", "dir": "SELL", "result": "TP1", "points": 800, "pct": 0.56}, {"date": "08.05.2026", "pair": "GBPUSD", "dir": "BUY", "result": "SL", "points": -248, "pct": -1.0}, {"date": "11.05.2026", "pair": "XAUUSD", "dir": "BUY", "result": "TP4", "points": 3700, "pct": 2.59}, {"date": "11.05.2026", "pair": "GBPUSD", "dir": "BUY", "result": "TP2", "points": 315, "pct": 1.92}, {"date": "12.05.2026", "pair": "XAUUSD", "dir": "BUY", "result": "TP1", "points": 550, "pct": 0.38}, {"date": "12.05.2026", "pair": "GBPUSD", "dir": "BUY", "result": "TP2", "points": -430, "pct": -2.62}, {"date": "13.05.2026", "pair": "USDCHF", "dir": "BUY", "result": "TP1", "points": 82, "pct": 0.4}, {"date": "13.05.2026", "pair": "XAUUSD", "dir": "BUY", "result": "SL", "points": -1800, "pct": -1.0}, {"date": "13.05.2026", "pair": "XAUUSD", "dir": "BUY", "result": "TP1", "points": 600, "pct": 0.42}, {"date": "14.05.2026", "pair": "USDCHF", "dir": "BUY", "result": "TP3", "points": 270, "pct": 1.32}, {"date": "14.05.2026", "pair": "XAUUSD", "dir": "BUY", "result": "TP2", "points": 700, "pct": 0.49}, {"date": "15.05.2026", "pair": "XAUUSD", "dir": "SELL", "result": "TP3", "points": 2200, "pct": 1.54}, {"date": "18.05.2026", "pair": "XAUUSD", "dir": "SELL", "result": "TP3", "points": 1200, "pct": 0.84}, {"date": "18.05.2026", "pair": "XAUUSD", "dir": "SELL", "result": "SL", "points": -1600, "pct": -1.0}, {"date": "19.05.2026", "pair": "NZDUSD", "dir": "BUY", "result": "SL", "points": -208, "pct": -1.0}, {"date": "19.05.2026", "pair": "AUDUSD", "dir": "SELL", "result": "TP3", "points": 205, "pct": 0.25}, {"date": "20.05.2026", "pair": "EURUSD", "dir": "SELL", "result": "SL", "points": -250, "pct": -1.0}, {"date": "20.05.2026", "pair": "XAUUSD", "dir": "BUY", "result": "TP4", "points": 1800, "pct": 1.26}, {"date": "21.05.2026", "pair": "XAUUSD", "dir": "BUY", "result": "TP4", "points": 1900, "pct": 1.33}, {"date": "21.05.2026", "pair": "XAUUSD", "dir": "SELL", "result": "TP3", "points": 1800, "pct": 1.26}, {"date": "22.05.2026", "pair": "XAUUSD", "dir": "BUY", "result": "TP2", "points": 1180, "pct": 0.82}, {"date": "22.05.2026", "pair": "XAUUSD", "dir": "SELL", "result": "TP3", "points": 2000, "pct": 1.4}, {"date": "22.05.2026", "pair": "USDCAD", "dir": "SELL", "result": "BE", "points": 0, "pct": 0.0}, {"date": "22.05.2026", "pair": "XAUUSD", "dir": "SELL", "result": "TP2", "points": 700, "pct": 0.49}, {"date": "25.05.2026", "pair": "XAUUSD", "dir": "BUY", "result": "TP3", "points": 1750, "pct": 1.22}, {"date": "25.05.2026", "pair": "XAUUSD", "dir": "BUY", "result": "TP1", "points": 1350, "pct": 0.94}, {"date": "25.05.2026", "pair": "EURUSD", "dir": "BUY", "result": "TP1", "points": 64, "pct": 0.4}, {"date": "26.05.2026", "pair": "GBPUSD", "dir": "SELL", "result": "TP3", "points": 346, "pct": 2.1}, {"date": "26.05.2026", "pair": "XAUUSD", "dir": "SELL", "result": "TP1", "points": 800, "pct": 0.56}, {"date": "27.05.2026", "pair": "GBPUSD", "dir": "SELL", "result": "TP1", "points": 74, "pct": 0.45}, {"date": "27.05.2026", "pair": "EURUSD", "dir": "SELL", "result": "SL", "points": -114, "pct": -1.0}, {"date": "28.05.2026", "pair": "GBPUSD", "dir": "SELL", "result": "TP1", "points": 67, "pct": 0.41}, {"date": "28.05.2026", "pair": "XAUUSD", "dir": "SELL", "result": "TP2", "points": 1300, "pct": 0.91}, {"date": "29.05.2026", "pair": "GBPUSD", "dir": "BUY", "result": "TP1", "points": 40, "pct": 0.24}, {"date": "29.05.2026", "pair": "XAUUSD", "dir": "SELL", "result": "SL", "points": -1000, "pct": -1.0}, {"date": "01.06.2026", "pair": "EURUSD", "dir": "BUY", "result": "SL", "points": -148, "pct": -1.0}, {"date": "01.06.2026", "pair": "XAUUSD", "dir": "SELL", "result": "SL", "points": -700, "pct": -1.0}, {"date": "02.06.2026", "pair": "XAUUSD", "dir": "SELL", "result": "TP3", "points": 1670, "pct": 1.17}, {"date": "02.06.2026", "pair": "EURUSD", "dir": "SELL", "result": "SL", "points": -90, "pct": -1.0}, {"date": "03.06.2026", "pair": "EURUSD", "dir": "SELL", "result": "TP3", "points": 191, "pct": 1.19}, {"date": "03.06.2026", "pair": "XAUUSD", "dir": "SELL", "result": "SL", "points": -1100, "pct": -1.0}, {"date": "03.06.2026", "pair": "GBPUSD", "dir": "SELL", "result": "TP2", "points": 305, "pct": 1.86}, {"date": "04.06.2026", "pair": "XAUUSD", "dir": "SELL", "result": "SL", "points": -2120, "pct": -1.0}, {"date": "05.06.2026", "pair": "XAUUSD", "dir": "SELL", "result": "TP1", "points": 300, "pct": 0.21}, {"date": "08.06.2026", "pair": "XAUUSD", "dir": "SELL", "result": "TP2", "points": 1530, "pct": 1.07}, {"date": "08.06.2026", "pair": "EURUSD", "dir": "SELL", "result": "TP1", "points": 106, "pct": 0.66}, {"date": "08.06.2026", "pair": "USDCAD", "dir": "BUY", "result": "TP1", "points": 100, "pct": 1.18}, {"date": "09.06.2026", "pair": "GBPUSD", "dir": "SELL", "result": "SL", "points": -110, "pct": -1.0}, {"date": "09.06.2026", "pair": "XAUUSD", "dir": "BUY", "result": "TP4", "points": 1900, "pct": 1.33}, {"date": "09.06.2026", "pair": "EURUSD", "dir": "SELL", "result": "TP1", "points": 210, "pct": 1.31}, {"date": "10.06.2026", "pair": "XAUUSD", "dir": "SELL", "result": "TP4", "points": 2800, "pct": 1.96}, {"date": "10.06.2026", "pair": "EURUSD", "dir": "SELL", "result": "SL", "points": -95, "pct": -1.0}, {"date": "10.06.2026", "pair": "XAUUSD", "dir": "BUY", "result": "TP3", "points": 970, "pct": 0.68}, {"date": "10.06.2026", "pair": "XAUUSD", "dir": "SELL", "result": "SL", "points": -1160, "pct": -1.0}, {"date": "11.06.2026", "pair": "EURUSD", "dir": "SELL", "result": "TP1", "points": 65, "pct": 0.41}, {"date": "11.06.2026", "pair": "GBPUSD", "dir": "SELL", "result": "TP3", "points": 321, "pct": 1.95}, {"date": "11.06.2026", "pair": "XAUUSD", "dir": "SELL", "result": "TP3", "points": 2500, "pct": 1.75}, {"date": "12.06.2026", "pair": "XAUUSD", "dir": "SELL", "result": "TP1", "points": 550, "pct": 0.38}, {"date": "12.06.2026", "pair": "GBPUSD", "dir": "SELL", "result": "TP1", "points": 104, "pct": 0.63}, {"date": "12.06.2026", "pair": "XAUUSD", "dir": "SELL", "result": "TP3", "points": 1300, "pct": 0.91}, {"date": "15.06.2026", "pair": "USDCHF", "dir": "BUY", "result": "SL", "points": -60, "pct": -1.0}, {"date": "15.06.2026", "pair": "EURUSD", "dir": "SELL", "result": "TP4", "points": 536, "pct": 3.35}, {"date": "15.06.2026", "pair": "USDCHF", "dir": "BUY", "result": "TP1", "points": 60, "pct": 0.29}, {"date": "15.06.2026", "pair": "XAUUSD", "dir": "SELL", "result": "TP1", "points": 700, "pct": 0.49}, {"date": "16.06.2026", "pair": "XAUUSD", "dir": "SELL", "result": "TP1", "points": 370, "pct": 0.26}, {"date": "16.06.2026", "pair": "USDCHF", "dir": "SELL", "result": "TP2", "points": 220, "pct": 1.07}, {"date": "16.06.2026", "pair": "XAUUSD", "dir": "SELL", "result": "TP2", "points": 2000, "pct": 1.4}, {"date": "16.06.2026", "pair": "GBPUSD", "dir": "SELL", "result": "TP4", "points": 384, "pct": 2.34}, {"date": "17.06.2026", "pair": "XAUUSD", "dir": "SELL", "result": "TP2", "points": 810, "pct": 0.57}, {"date": "17.06.2026", "pair": "XAUUSD", "dir": "SELL", "result": "SL", "points": -2460, "pct": -1.0}, {"date": "18.06.2026", "pair": "USDCAD", "dir": "BUY", "result": "TP3", "points": 300, "pct": 3.53}, {"date": "18.06.2026", "pair": "EURUSD", "dir": "SELL", "result": "SL", "points": -173, "pct": -1.0}, {"date": "18.06.2026", "pair": "XAUUSD", "dir": "SELL", "result": "TP4", "points": 2700, "pct": 1.89}, {"date": "19.06.2026", "pair": "USDCHF", "dir": "SELL", "result": "SL", "points": -350, "pct": -1.0}, {"date": "19.06.2026", "pair": "XAUUSD", "dir": "BUY", "result": "TP3", "points": 2100, "pct": 1.47}, {"date": "22.06.2026", "pair": "EURUSD", "dir": "BUY", "result": "SL", "points": -80, "pct": -1.0}, {"date": "22.06.2026", "pair": "XAUUSD", "dir": "SELL", "result": "SL", "points": -1400, "pct": -1.0}, {"date": "22.06.2026", "pair": "EURUSD", "dir": "SELL", "result": "SL", "points": -156, "pct": -1.0}, {"date": "22.06.2026", "pair": "XAUUSD", "dir": "SELL", "result": "TP3", "points": 2630, "pct": 1.84}, {"date": "23.06.2026", "pair": "GBPUSD", "dir": "BUY", "result": "TP1", "points": 99, "pct": 0.6}, {"date": "23.06.2026", "pair": "XAUUSD", "dir": "BUY", "result": "TP1", "points": 750, "pct": 0.52}, {"date": "23.06.2026", "pair": "XAUUSD", "dir": "SELL", "result": "SL", "points": -2170, "pct": -1.0}, {"date": "24.06.2026", "pair": "GBPUSD", "dir": "SELL", "result": "TP1", "points": 99, "pct": 0.6}, {"date": "24.06.2026", "pair": "XAUUSD", "dir": "BUY", "result": "SL", "points": -670, "pct": -1.0}, {"date": "24.06.2026", "pair": "XAUUSD", "dir": "BUY", "result": "SL", "points": -1300, "pct": -1.0}, {"date": "25.06.2026", "pair": "XAUUSD", "dir": "BUY", "result": "TP3", "points": 1510, "pct": 1.06}, {"date": "25.06.2026", "pair": "XAUUSD", "dir": "SELL", "result": "SL", "points": -2400, "pct": -1.0}, {"date": "25.06.2026", "pair": "EURUSD", "dir": "BUY", "result": "TP3", "points": 349, "pct": 2.18}, {"date": "25.06.2026", "pair": "AUDUSD", "dir": "BUY", "result": "TP2", "points": 225, "pct": 0.28}, {"date": "26.06.2026", "pair": "XAUUSD", "dir": "BUY", "result": "BE", "points": 1, "pct": 0.0}, {"date": "26.06.2026", "pair": "XAUUSD", "dir": "BUY", "result": "TP3", "points": 1550, "pct": 1.08}, {"date": "26.06.2026", "pair": "XAUUSD", "dir": "BUY", "result": "TP1", "points": 400, "pct": 0.28}, {"date": "26.06.2026", "pair": "XAUUSD", "dir": "BUY", "result": "TP4", "points": 2300, "pct": 1.61}, {"date": "29.06.2026", "pair": "XAUUSD", "dir": "BUY", "result": "TP1", "points": 1000, "pct": 0.7}, {"date": "29.06.2026", "pair": "EURUSD", "dir": "BUY", "result": "TP2", "points": 173, "pct": 1.08}, {"date": "29.06.2026", "pair": "XAUUSD", "dir": "BUY", "result": "TP2", "points": 1020, "pct": 0.71}, {"date": "30.06.2026", "pair": "XAUUSD", "dir": "BUY", "result": "TP4", "points": 3560, "pct": 2.49}, {"date": "30.06.2026", "pair": "GBPUSD", "dir": "BUY", "result": "SL", "points": -170, "pct": -1.0}, {"date": "01.07.2026", "pair": "GBPUSD", "dir": "BUY", "result": "TP1", "points": 93, "pct": 0.57}, {"date": "01.07.2026", "pair": "XAUUSD", "dir": "BUY", "result": "TP4", "points": 4000, "pct": 2.8}, {"date": "01.07.2026", "pair": "XAUUSD", "dir": "SELL", "result": "SL", "points": -1400, "pct": -1.0}, {"date": "02.07.2026", "pair": "XAUUSD", "dir": "BUY", "result": "TP4", "points": 4100, "pct": 2.87}, {"date": "02.07.2026", "pair": "EURUSD", "dir": "BUY", "result": "TP4", "points": 827, "pct": 5.16}, {"date": "03.07.2026", "pair": "XAUUSD", "dir": "BUY", "result": "SL", "points": -2000, "pct": -1.0}, {"date": "03.07.2026", "pair": "GBPUSD", "dir": "BUY", "result": "TP1", "points": 89, "pct": 0.54}, {"date": "03.07.2026", "pair": "XAUUSD", "dir": "BUY", "result": "TP3", "points": 2500, "pct": 1.75}, {"date": "06.07.2026", "pair": "XAUUSD", "dir": "BUY", "result": "TP1", "points": 820, "pct": 0.57}, {"date": "06.07.2026", "pair": "XAUUSD", "dir": "BUY", "result": "TP3", "points": 1740, "pct": 1.22}, {"date": "07.07.2026", "pair": "XAUUSD", "dir": "SELL", "result": "SL", "points": -700, "pct": -1.0}, {"date": "07.07.2026", "pair": "GBPUSD", "dir": "BUY", "result": "SL", "points": -108, "pct": -1.0}, {"date": "07.07.2026", "pair": "XAUUSD", "dir": "BUY", "result": "TP4", "points": 3700, "pct": 2.59}, {"date": "08.07.2026", "pair": "XAUUSD", "dir": "SELL", "result": "TP4", "points": 2940, "pct": 2.06}, {"date": "08.07.2026", "pair": "XAUUSD", "dir": "SELL", "result": "TP4", "points": 3890, "pct": 2.72}, {"date": "09.07.2026", "pair": "XAUUSD", "dir": "SELL", "result": "TP2", "points": 880, "pct": 0.62}, {"date": "09.07.2026", "pair": "XAUUSD", "dir": "BUY", "result": "TP2", "points": 1210, "pct": 0.85}, {"date": "10.07.2026", "pair": "XAUUSD", "dir": "SELL", "result": "TP2", "points": 1070, "pct": 0.75}, {"date": "10.07.2026", "pair": "GBPUSD", "dir": "SELL", "result": "TP3", "points": 568, "pct": 3.45}, {"date": "13.07.2026", "pair": "XAUUSD", "dir": "BUY", "result": "TP3", "points": 1500, "pct": 1.05}, {"date": "14.07.2026", "pair": "XAUUSD", "dir": "BUY", "result": "TP4", "points": 4100, "pct": 2.87}, {"date": "14.07.2026", "pair": "XAUUSD", "dir": "SELL", "result": "TP1", "points": 400, "pct": 0.28}, {"date": "14.07.2026", "pair": "XAUUSD", "dir": "SELL", "result": "BE", "points": 0, "pct": 0.0}, {"date": "14.07.2026", "pair": "XAUUSD", "dir": "BUY", "result": "TP3", "points": 1400, "pct": 0.98}, {"date": "15.07.2026", "pair": "XAUUSD", "dir": "SELL", "result": "TP2", "points": 1300, "pct": 0.91}, {"date": "15.07.2026", "pair": "XAUUSD", "dir": "SELL", "result": "BE", "points": 0, "pct": 0.0}, {"date": "15.07.2026", "pair": "XAUUSD", "dir": "SELL", "result": "SL", "points": -1000, "pct": -1.0}, {"date": "15.07.2026", "pair": "XAUUSD", "dir": "SELL", "result": "BE", "points": 0, "pct": 0.0}, {"date": "15.07.2026", "pair": "XAUUSD", "dir": "BUY", "result": "TP2", "points": 1000, "pct": 0.7}, {"date": "16.07.2026", "pair": "XAUUSD", "dir": "BUY", "result": "TP3", "points": 1600, "pct": 1.12}, {"date": "16.07.2026", "pair": "XAUUSD", "dir": "BUY", "result": "TP3", "points": 1300, "pct": 0.91}, {"date": "16.07.2026", "pair": "XAUUSD", "dir": "SELL", "result": "TP4", "points": 3500, "pct": 2.45}, {"date": "17.07.2026", "pair": "XAUUSD", "dir": "SELL", "result": "TP2", "points": 700, "pct": 0.49}, {"date": "20.07.2026", "pair": "XAUUSD", "dir": "SELL", "result": "TP2", "points": 970, "pct": 0.68}, {"date": "20.07.2026", "pair": "GBPUSD", "dir": "SELL", "result": "SL", "points": -186, "pct": -1.0}, {"date": "20.07.2026", "pair": "EURUSD", "dir": "SELL", "result": "TP4", "points": 331, "pct": 2.07}, {"date": "20.07.2026", "pair": "XAUUSD", "dir": "SELL", "result": "TP1", "points": 1280, "pct": 0.89}, {"date": "21.07.2026", "pair": "EURUSD", "dir": "SELL", "result": "TP3", "points": 329, "pct": 2.05}, {"date": "21.07.2026", "pair": "XAUUSD", "dir": "SELL", "result": "TP2", "points": 1760, "pct": 1.23}, {"date": "21.07.2026", "pair": "USDCHF", "dir": "BUY", "result": "TP4", "points": 278, "pct": 1.36}, {"date": "22.07.2026", "pair": "XAUUSD", "dir": "SELL", "result": "TP2", "points": 1070, "pct": 0.75}, {"date": "22.07.2026", "pair": "GBPUSD", "dir": "SELL", "result": "TP4", "points": 518, "pct": 3.15}, {"date": "23.07.2026", "pair": "XAUUSD", "dir": "SELL", "result": "TP4", "points": 3440, "pct": 2.4}, {"date": "23.07.2026", "pair": "EURUSD", "dir": "SELL", "result": "TP3", "points": 337, "pct": 2.1}, {"date": "24.07.2026", "pair": "EURUSD", "dir": "SELL", "result": "TP2", "points": 125, "pct": 0.78}, {"date": "24.07.2026", "pair": "XAUUSD", "dir": "SELL", "result": "TP2", "points": 420, "pct": 0.29}, {"date": "27.07.2026", "pair": "XAUUSD", "dir": "SELL", "result": "TP1", "points": 600, "pct": 0.42}, {"date": "27.07.2026", "pair": "XAUUSD", "dir": "SELL", "result": "TP1", "points": 480, "pct": 0.34}, {"date": "28.07.2026", "pair": "USDCAD", "dir": "SELL", "result": "TP3", "points": 342, "pct": 4.02}, {"date": "28.07.2026", "pair": "XAUUSD", "dir": "BUY", "result": "SL", "points": -1400, "pct": -1.0}, {"date": "29.07.2026", "pair": "XAUUSD", "dir": "SELL", "result": "TP4", "points": 1940, "pct": 1.36}, {"date": "30.07.2026", "pair": "GBPUSD", "dir": "BUY", "result": "TP4", "points": 382, "pct": 2.32}, {"date": "30.07.2026", "pair": "USDCAD", "dir": "SELL", "result": "TP3", "points": 207, "pct": 2.44}, {"date": "30.07.2026", "pair": "XAUUSD", "dir": "SELL", "result": "SL", "points": -179, "pct": -1.0}, {"date": "30.07.2026", "pair": "USDCHF", "dir": "SELL", "result": "TP2", "points": 620, "pct": 3.02}, {"date": "30.07.2026", "pair": "XAUUSD", "dir": "SELL", "result": "SL", "points": -1300, "pct": -1.0}, {"date": "30.07.2026", "pair": "EURUSD", "dir": "SELL", "result": "SL", "points": -218, "pct": -1.0}, {"date": "31.07.2026", "pair": "EURUSD", "dir": "SELL", "result": "SL", "points": -75, "pct": -1.0}, {"date": "31.07.2026", "pair": "EURUSD", "dir": "SELL", "result": "TP2", "points": 311, "pct": 1.94}, {"date": "31.07.2026", "pair": "USDCAD", "dir": "BUY", "result": "TP3", "points": 208, "pct": 2.45}];
-
-/* ---------- decorative blobs / chrome (purely visual, no data) ---------- */
-(function(){
-  const shapes = {
-    A:"M44,-58C58,-46,70,-31,73,-14C76,3,69,21,57,35C45,49,28,58,9,64C-10,70,-31,72,-47,63C-63,54,-74,33,-76,12C-78,-9,-71,-31,-57,-46C-43,-61,-22,-69,-2,-67C18,-65,30,-70,44,-58Z",
-    B:"M40,-52C53,-42,64,-29,68,-13C72,3,69,21,59,33C49,45,32,51,15,57C-2,63,-20,69,-35,62C-50,55,-62,35,-65,15C-68,-5,-61,-26,-48,-40C-35,-54,-17,-61,1,-62C19,-63,27,-62,40,-52Z",
-    C:"M46,-60C60,-48,71,-32,73,-15C75,2,68,20,57,34C46,48,31,58,13,63C-5,68,-25,68,-42,59C-59,50,-73,32,-76,12C-79,-8,-71,-30,-57,-45C-43,-60,-22,-68,-2,-66C18,-64,32,-72,46,-60Z",
-    D:"M42,-55C55,-44,66,-30,70,-14C74,2,70,20,60,33C50,46,34,54,16,60C-2,66,-22,70,-38,62C-54,54,-66,34,-69,14C-72,-6,-65,-27,-52,-42C-39,-57,-19,-65,-1,-64C17,-63,29,-66,42,-55Z"
-  };
-  function fill(svg, key){svg.innerHTML=`<g transform="translate(100,100)" filter="url(#liquid)"><path d="${shapes[key]}" fill="url(#chrome)"/><path d="${shapes[key]}" fill="url(#chromeHi)"/></g>`;}
-  document.querySelectorAll('[data-blob]').forEach(s=>fill(s, s.getAttribute('data-blob')));
-  function sheet(svg){svg.setAttribute('viewBox','0 0 200 200');svg.innerHTML=`<g filter="url(#liquid)"><rect x="-20" y="-20" width="240" height="240" fill="url(#chrome)"/><ellipse cx="62" cy="54" rx="70" ry="40" fill="url(#chromeHi)"/><ellipse cx="150" cy="150" rx="60" ry="44" fill="#ffffff" opacity="0.18"/></g>`;}
-  document.querySelectorAll('[data-chrome]').forEach(sheet);
-})();
 
 /* ---------- derived stats, single source of truth ---------- */
 const MONTH_NAMES = {1:'Январь',2:'Февраль',3:'Март',4:'Апрель',5:'Май',6:'Июнь',7:'Июль',8:'Август',9:'Сентябрь',10:'Октябрь',11:'Ноябрь',12:'Декабрь'};
 const MONTH_ABBR = {1:'янв',2:'фев',3:'мар',4:'апр',5:'май',6:'июн',7:'июл',8:'авг',9:'сен',10:'окт',11:'ноя',12:'дек'};
 const MONTH_GEN = {'Январь':'января','Февраль':'февраля','Март':'марта','Апрель':'апреля','Май':'мая','Июнь':'июня','Июль':'июля','Август':'августа','Сентябрь':'сентября','Октябрь':'октября','Ноябрь':'ноября','Декабрь':'декабря'};
 const ASSET_NAMES = { XAUUSD:'Золото', EURUSD:'Евро', GBPUSD:'Фунт', USDCHF:'Франк', USDCAD:'Канадец', AUDUSD:'Австралиец', USDJPY:'Иена', NZDUSD:'Киви' };
-const RESULT_LABEL = { TP1:'1 тейк', TP2:'2 тейк', TP3:'3 тейк', TP4:'4 тейк', SL:'Стоп', BE:'Безубыток' };
+const RESULT_LABEL = { TP1:'1-й тейк', TP2:'2-й тейк', TP3:'3-й тейк', TP4:'4-й тейк', SL:'Стоп', BE:'Безубыток' };
 const OUTCOME_CLASS = { TP1:'take', TP2:'take', TP3:'take', TP4:'take', SL:'stop', BE:'be' };
 
 function slashPair(p){ return p.slice(0,3) + '/' + p.slice(3); }
-function avatarCode(p){ const base=p.slice(0,3), quote=p.slice(3); return base==='USD' ? quote : base; }
 function isWin(t){ return t.result!=='SL' && t.result!=='BE'; }
 const fmtPct = v => (v>=0?'+':'') + v.toFixed(1).replace('.',',') + '%';
 const fmtPct2 = v => (v>=0?'+':'') + v.toFixed(2).replace('.',',') + '%';
@@ -503,91 +397,66 @@ function computeStats(ledger){
 const STATS = computeStats(LEDGER);
 const WINRATE = STATS.wins/STATS.total*100;
 
-/* ---------- hero ---------- */
-document.getElementById('heroBig').innerHTML = STATS.totalPct.toFixed(1).replace('.',',').replace('+','') .replace(/^/, STATS.totalPct>=0?'+':'') + '<span class="pct">%</span>';
-document.getElementById('heroMonthsWord').textContent = STATS.months.length + ' месяца';
-document.getElementById('heroLede').innerHTML = 'Накопленная доходность по всем ' + STATS.total + ' сделкам при фиксированном риске <b>1% на сделку</b>. ' +
-  (STATS.profitableMonths===STATS.months.length ? ('Все ' + STATS.months.length + ' месяца — в плюс.') : (STATS.profitableMonths + ' прибыльных месяца из ' + STATS.months.length + '.'));
+/* ---------- statement header ---------- */
+document.getElementById('stMonthsWord').textContent = STATS.months.length + ' месяца';
+document.getElementById('heroBig').textContent = (STATS.totalPct>=0?'+':'') + STATS.totalPct.toFixed(2).replace('.',',') + '%';
+document.getElementById('heroCap').innerHTML = 'Накопленный результат по ' + STATS.total + ' сделкам при фиксированном риске <b>1% на сделку</b>, без реинвестирования.';
 
-const AV_GRADIENTS = [
-  {bg:'linear-gradient(135deg,#e6c47e,#b9883a)', color:null},
-  {bg:'linear-gradient(135deg,#e8eaed,#9b9fa6)', color:null},
-  {bg:'linear-gradient(135deg,#0c0c0d,#3a3a3d)', color:'#e6c47e'},
-  {bg:'linear-gradient(135deg,#ff7a5c,#ff5a36)', color:null},
-];
-document.getElementById('avstack').innerHTML = STATS.instruments.slice(0,4).map((ins,i)=>{
-  const g = AV_GRADIENTS[i];
-  return '<span class="av" style="background:' + g.bg + (g.color?';color:'+g.color:'') + '">' + avatarCode(ins.pair) + '</span>';
-}).join('');
-document.getElementById('proofText').innerHTML = '<b>' + STATS.total + ' сделок</b> по ' + STATS.instruments.length + ' инструментам — все<br>учтены и сверены';
-
+/* ---------- ribbon curve ---------- */
 document.getElementById('curveRange').textContent = '0 → ' + fmtPct(STATS.totalPct);
 document.getElementById('curveX').innerHTML = STATS.months.map(m=>'<span>'+MONTH_ABBR[m.mo]+'</span>').join('');
 
-(function(){
-  const W=480,H=250,pl=6,pr=6,pt=20,pb=20;
-  const pts=STATS.curve, max=Math.max(...pts), min=Math.min(...pts,0);
+function drawCurve(elId, pts, big){
+  const W=980,H=big?190:150,pl=4,pr=4,pt=14,pb=14;
+  const max=Math.max(...pts), min=Math.min(...pts,0);
   const x=i=>pl+(W-pl-pr)*(i/(pts.length-1));
   const y=v=>pt+(H-pt-pb)*(1-(v-min)/((max-min)||1));
   const line=pts.map((v,i)=>(i?"L":"M")+x(i).toFixed(1)+" "+y(v).toFixed(1)).join(" ");
   const area=line+` L${x(pts.length-1).toFixed(1)} ${y(min).toFixed(1)} L${x(0).toFixed(1)} ${y(min).toFixed(1)} Z`;
-  let grid=""; const gridVals = [0, Math.round(max/2), Math.round(max)];
-  gridVals.forEach(g=>{const gy=y(g);grid+=`<line x1="${pl}" y1="${gy}" x2="${W-pr}" y2="${gy}" stroke="#2a2a2d" stroke-width="1"/><text x="${W-pr}" y="${gy-4}" text-anchor="end" font-family="var(--mono)" font-size="9" fill="#5d5c57">${g}%</text>`;});
-  const dots=pts.map((v,i)=>`<circle cx="${x(i).toFixed(1)}" cy="${y(v).toFixed(1)}" r="${i===pts.length-1?4:2.6}" fill="${i===pts.length-1?'var(--lime)':'#18181a'}" stroke="var(--lime)" stroke-width="1.6"/>`).join("");
-  document.getElementById('curve').innerHTML=
-   `<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" style="width:100%"> <defs><linearGradient id="lg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--lime)" stop-opacity="0.22"/><stop offset="1" stop-color="var(--lime)" stop-opacity="0"/></linearGradient></defs>
-      ${grid}
-      <path d="${area}" fill="url(#lg)"/> <path d="${line}" fill="none" stroke="var(--lime)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/> <g>${dots}</g> </svg>`;
-})();
+  const dots=pts.map((v,i)=>`<circle cx="${x(i).toFixed(1)}" cy="${y(v).toFixed(1)}" r="${i===pts.length-1?4:2.4}" fill="${i===pts.length-1?'#f0d0b4':'#0a0b18'}" stroke="#f0d0b4" stroke-width="1.5"/>`).join("");
+  let grid=""; const gv=[0, Math.round(max)];
+  gv.forEach(g=>{const gy=y(g);grid+=`<line x1="${pl}" y1="${gy}" x2="${W-pr}" y2="${gy}" stroke="#262a46" stroke-width="1"/>`;});
+  document.getElementById(elId).innerHTML =
+   `<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none"><defs><linearGradient id="lg-${elId}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f0d0b4" stop-opacity="0.16"/><stop offset="1" stop-color="#f0d0b4" stop-opacity="0"/></linearGradient></defs>
+   ${grid}<path d="${area}" fill="url(#lg-${elId})"/><path d="${line}" fill="none" stroke="#f0d0b4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><g>${dots}</g></svg>`;
+}
+drawCurve('curve', STATS.curve, true);
 
-/* ---------- kcards ---------- */
-const KCARDS = [
-  { cls:'lime', kl:'Всего сделок', kv: STATS.total + '', kn:'по <b>' + STATS.instruments.length + '</b> инструментам' },
-  { cls:'dark', kl:'Винрейт', kv: WINRATE.toFixed(1).replace('.',',') + '<span class="of">%</span>', kn:'закрыты не по стопу' },
-  { cls:'chrome', kl:'Прибыльных месяцев', kv: STATS.profitableMonths + '<span class="of">/' + STATS.months.length + '</span>', kn:'лучший — <b>' + STATS.bestMonth.label.toLowerCase() + '</b>', blob:true },
-  { cls:'light', kl:'Сделок в плюс', kv: STATS.wins + '', kn:'против <b>' + STATS.sls + '</b> по стопу' },
+/* ---------- stat strip ---------- */
+const STAT_ITEMS = [
+  { l:'Всего сделок', v: STATS.total+'', n:'по <b>'+STATS.instruments.length+'</b> инструментам' },
+  { l:'Winrate', v: WINRATE.toFixed(1).replace('.',',')+'<span class="of">%</span>', n:'закрыты не по стопу' },
+  { l:'Риск на сделку', v:'1<span class="of">%</span>', n:'фиксированный' },
+  { l:'Месяцев в плюс', v: STATS.profitableMonths+'<span class="of">/'+STATS.months.length+'</span>', n:'лучший — <b>'+STATS.bestMonth.label.toLowerCase()+'</b>' },
+  { l:'Сделок в плюс', v: STATS.wins+'', n:'против <b>'+STATS.sls+'</b> по стопу' },
 ];
-document.getElementById('kcards').innerHTML = KCARDS.map(c =>
-  '<div class="kc ' + c.cls + '">' + (c.blob?'<svg class="blob blob-2" viewBox="0 0 200 200" data-blob="B"></svg>':'') +
-  '<div class="kl">' + c.kl + '</div><div class="kv">' + c.kv + '</div><div class="kn">' + c.kn + '</div></div>'
+document.getElementById('statStrip').innerHTML = STAT_ITEMS.map(s=>
+  '<div class="stat"><div class="s-l">'+s.l+'</div><div class="s-v">'+s.v+'</div><div class="s-n">'+s.n+'</div></div>'
 ).join('');
 
-/* ---------- manifesto + pills ---------- */
-document.getElementById('manifestoText').textContent = 'Все ' + STATS.total + ' сделок за ' + STATS.months.length + ' месяца выгружены из журнала и сверены с итогами таблицы. Смотрите динамику, инструменты и каждую запись — ниже.';
+/* ---------- callout ---------- */
+document.getElementById('calloutText').innerHTML = '<b>'+STATS.total+' сделок</b> — ни одной пропущенной, ни одной приукрашенной. Полный журнал, помесячная динамика и разбор по инструментам — ниже.';
 
-const PILLS = [
-  { cls:'dark', t: fmtPct2(STATS.totalPct), s:'итог за ' + STATS.months.length + ' месяца' },
-  { cls:'lime', t: WINRATE.toFixed(1).replace('.',',') + '%', s:'винрейт' },
-  { cls:'chrome', t:'1%', s:'риск на сделку' },
-  { cls:'light', t: STATS.profitableMonths + ' / ' + STATS.months.length, s:'месяцев в плюс' },
-];
-document.getElementById('pillsRow').innerHTML = PILLS.map(p =>
-  '<div class="pill-card ' + p.cls + '">' + (p.cls==='chrome' ? '<svg class="chrome-sheet" viewBox="0 0 200 200" preserveAspectRatio="xMidYMid slice" data-chrome></svg><div class="pc-in"><div class="pc-t">'+p.t+'</div><div class="pc-s">'+p.s+'</div></div>' : '<div class="pc-t">'+p.t+'</div><div class="pc-s">'+p.s+'</div>') + '</div>'
-).join('');
-document.querySelectorAll('[data-chrome]').forEach(s=>{
-  s.setAttribute('viewBox','0 0 200 200');
-  s.innerHTML=`<g filter="url(#liquid)"><rect x="-20" y="-20" width="240" height="240" fill="url(#chrome)"/><ellipse cx="62" cy="54" rx="70" ry="40" fill="url(#chromeHi)"/><ellipse cx="150" cy="150" rx="60" ry="44" fill="#ffffff" opacity="0.18"/></g>`;
-});
-
-/* ---------- monthly grid ---------- */
-document.getElementById('mgrid').innerHTML = STATS.months.map(m=>{
+/* ---------- monthly list ---------- */
+document.getElementById('monthList').innerHTML = STATS.months.map(m=>{
   const tot=m.total, w=m.win/tot*100, b=m.be/tot*100, l=m.sl/tot*100;
-  const pos=m.pct>=0, feat=(m===STATS.bestMonth);
-  return `<div class="mcard ${feat?'feat':''}">
-    ${feat?`<svg class="blob blob-2" viewBox="0 0 200 200" data-mblob></svg><span class="badge">лучший</span>`:''}
-    <div class="mc-top"> <div class="mc-mo">${m.label}<span class="yr">${m.y}</span></div> <div class="mc-arrow">${pos?'↗':'↘'}</div> </div> <div class="mc-pnl ${pos?'pos':'neg'} tnum">${fmtPct(m.pct)}</div> <div class="mc-bar"><i class="w" style="width:${w}%"></i><i class="b" style="width:${b}%"></i><i class="l" style="width:${l}%"></i></div> <div class="mc-leg tnum"><span>${m.win} тейк</span><span>${m.be} б/у</span><span>${m.sl} стоп</span></div> <div class="mc-n tnum">${m.total} сделок</div> </div>`;
+  const pos=m.pct>=0, best=(m===STATS.bestMonth);
+  return `<div class="month-row ${best?'best':''}">
+    <div class="m-name">${m.label}<span class="yr">${m.y}</span>${best?'<span class="m-tag">лучший месяц</span>':''}</div>
+    <div><div class="m-bar"><i class="w" style="width:${w}%"></i><i class="b" style="width:${b}%"></i><i class="l" style="width:${l}%"></i></div><div class="m-leg">${m.win} тейк · ${m.be} б/у · ${m.sl} стоп</div></div>
+    <div><div class="m-pnl ${pos?'pos':'neg'} tnum">${fmtPct(m.pct)}</div></div>
+    <div class="m-arrow tnum">${m.total} сд.</div>
+  </div>`;
 }).join('');
-const mb = document.querySelector('[data-mblob]');
-if(mb) mb.innerHTML = `<g transform="translate(100,100)" filter="url(#liquid)"><path d="M40,-52C53,-42,64,-29,68,-13C72,3,69,21,59,33C49,45,32,51,15,57C-2,63,-20,69,-35,62C-50,55,-62,35,-65,15C-68,-5,-61,-26,-48,-40C-35,-54,-17,-61,1,-62C19,-63,27,-62,40,-52Z" fill="url(#chrome)"/></g>`;
 
-/* ---------- instruments panel ---------- */
+/* ---------- instruments ---------- */
 (function(){
   const maxAbs = Math.max(...STATS.instruments.map(a=>Math.abs(a.pct)));
   document.getElementById('inst').innerHTML = STATS.instruments.map(a=>{
     const pos=a.pct>=0, w=Math.max(3, Math.abs(a.pct)/maxAbs*100);
     const winrate = Math.round(a.win/a.count*100);
     const name = (ASSET_NAMES[a.pair]||a.pair) + ' · ' + a.count + ' · ' + winrate + '%';
-    return `<div class="irow"> <div class="itk">${slashPair(a.pair)}<span class="sub">${name}</span></div> <div class="itrack"><div class="ifill ${pos?'pos':'neg'}" style="width:${w}%"></div></div> <div class="ip ${pos?'pos':'neg'}">${fmtPct2(a.pct)}</div> </div>`;
+    return `<div class="ins-row"> <div class="ins-name">${slashPair(a.pair)}<span class="sub2b">${name}</span></div> <div class="ins-track"><div class="ins-fill ${pos?'pos':'neg'}" style="width:${w}%"></div></div> <div class="ins-pct ${pos?'pos':'neg'}">${fmtPct2(a.pct)}</div> </div>`;
   }).join('');
 })();
 
@@ -596,13 +465,13 @@ document.getElementById('oseghead').textContent = 'распределение в
 (function(){
   const outcomes = [
     { k:'Тейк-профит', n:STATS.wins, cls:'win', color:'var(--lime)' },
-    { k:'Безубыток', n:STATS.bes, cls:'be', color:'#6b6a64' },
+    { k:'Безубыток', n:STATS.bes, cls:'be', color:'var(--muted-d)' },
     { k:'Стоп-лосс', n:STATS.sls, cls:'loss', color:'var(--coral)' },
   ];
   const total = STATS.total;
-  document.getElementById('oseg').innerHTML = outcomes.map(o=>'<i class="s-'+o.cls+'" style="width:'+(o.n/total*100)+'%"></i>').join('');
+  document.getElementById('oseg').innerHTML = outcomes.map(o=>'<i style="width:'+(o.n/total*100)+'%;background:'+o.color+'"></i>').join('');
   document.getElementById('olist').innerHTML = outcomes.map(o=>
-    `<div class="orow"><span class="odot" style="background:${o.color}"></span><span class="on">${o.k}</span><span class="oc">${o.n}</span><span class="op">${Math.round(o.n/total*100)}%</span></div>`).join('');
+    `<div class="outcome-row"><span class="outcome-sq" style="background:${o.color}"></span><span>${o.k}</span><span class="oc2">${o.n}</span><span class="op2">${Math.round(o.n/total*100)}%</span></div>`).join('');
 
   const takes = [
     { l:'1-й тейк', n:STATS.tpCounts.TP1 },
@@ -612,34 +481,33 @@ document.getElementById('oseghead').textContent = 'распределение в
   ];
   const maxT = Math.max(...takes.map(t=>t.n));
   document.getElementById('takes').innerHTML = takes.map(t=>
-    `<div class="tkr"><span class="tkl">${t.l}</span><div class="tkt"><div class="tkf" style="width:${t.n/maxT*100}%"></div></div><span class="tkn">${t.n}</span></div>`).join('');
+    `<div class="tk-row"><span class="tkl2">${t.l}</span><div class="tk-track"><div class="tk-fill" style="width:${t.n/maxT*100}%"></div></div><span class="tk-n">${t.n}</span></div>`).join('');
 })();
 
-/* ---------- long / short ---------- */
+/* ---------- long / short diverging bar ---------- */
 (function(){
-  const dirInfo = { BUY:{arrow:'↑', name:'Лонг', cls:'long'}, SELL:{arrow:'↓', name:'Шорт', cls:'short'} };
-  document.getElementById('dir2').innerHTML = ['BUY','SELL'].map(d=>{
-    const s = STATS.dirStats[d], di = dirInfo[d];
-    const blob = d==='SELL' ? '<svg class="blob blob-2" viewBox="0 0 200 200" data-blob2="C"></svg>' : '';
-    return `<div class="dcard ${di.cls}"> ${blob}<div class="dh"><span class="dar">${di.arrow}</span><span class="dttl">${di.name}</span><span class="dn tnum">${s.count} сделок</span></div> <div class="dpnl tnum">${fmtPct(s.pct)}</div> <div class="dsub tnum">винрейт <b>${s.winrate.toFixed(0)}%</b> · ${s.share.toFixed(0)}% всех сделок</div> </div>`;
-  }).join('');
-  document.querySelectorAll('[data-blob2]').forEach(s=>{
-    const shapes2 = {C:"M46,-60C60,-48,71,-32,73,-15C75,2,68,20,57,34C46,48,31,58,13,63C-5,68,-25,68,-42,59C-59,50,-73,32,-76,12C-79,-8,-71,-30,-57,-45C-43,-60,-22,-68,-2,-66C18,-64,32,-72,46,-60Z"};
-    s.innerHTML = `<g transform="translate(100,100)" filter="url(#liquid)"><path d="${shapes2.C}" fill="url(#chrome)"/><path d="${shapes2.C}" fill="url(#chromeHi)"/></g>`;
-  });
+  const long = STATS.dirStats.BUY, short = STATS.dirStats.SELL;
+  document.getElementById('dvLongPnl').textContent = fmtPct(long.pct);
+  document.getElementById('dvShortPnl').textContent = fmtPct(short.pct);
+  document.getElementById('dvLongT').textContent = '↑ Лонг · ' + long.count + ' сделок';
+  document.getElementById('dvShortT').textContent = short.count + ' сделок · Шорт ↓';
+  const maxShare = Math.max(long.share, short.share);
+  document.getElementById('dvLongFill').style.width = (long.share/maxShare*100) + '%';
+  document.getElementById('dvShortFill').style.width = (short.share/maxShare*100) + '%';
+  document.getElementById('dvMeta').innerHTML =
+    '<span>винрейт <b style="color:var(--ink)">'+long.winrate.toFixed(1)+'%</b> · '+long.share.toFixed(0)+'% всех сделок</span>' +
+    '<span>винрейт <b style="color:var(--ink)">'+short.winrate.toFixed(1)+'%</b> · '+short.share.toFixed(0)+'% всех сделок</span>';
 })();
 
 /* ---------- trades ledger ---------- */
-document.getElementById('tvHeadSub').textContent = STATS.total + ' сделок · фиксированный риск 1% на каждую';
+document.getElementById('tvTotal').textContent = STATS.total;
 (function(){
-  const dcl = d => d==='BUY' ? 'long' : 'short';
-  const arrow = d => d==='BUY' ? '↑' : '↓';
-  const dirName = d => d==='BUY' ? 'Лонг' : 'Шорт';
+  const dirName = d => d==='BUY' ? 'Лонг ↑' : 'Шорт ↓';
   const pcl = res => res==='SL' ? 'neg' : (res==='BE' ? 'zero' : 'pos');
 
   const fb = document.getElementById('filterbar');
-  fb.innerHTML = `<button class="fchip active" data-f="all">Все<span class="fc">${STATS.total}</span></button>` +
-    STATS.months.map((m,i)=>`<button class="fchip" data-f="${i}">${m.label}<span class="fc">${m.total}</span></button>`).join('');
+  fb.innerHTML = `<button class="ftab active" data-f="all">Все<span class="fc2">${STATS.total}</span></button>` +
+    STATS.months.map((m,i)=>`<button class="ftab" data-f="${i}">${m.label}<span class="fc2">${m.total}</span></button>`).join('');
 
   function block(m){
     const pos = m.pct>=0;
@@ -648,28 +516,29 @@ document.getElementById('tvHeadSub').textContent = STATS.total + ' сделок 
       const mo = parseInt(t.date.split('.')[1],10);
       const dstr = day + ' ' + MONTH_ABBR[mo];
       const o = OUTCOME_CLASS[t.result];
-      return `<div class="trow is-${o}"> <span class="t-date">${dstr}</span><span class="t-asset">${slashPair(t.pair)}</span> <span class="t-dir ${dcl(t.dir)}"><span class="ar">${arrow(t.dir)}</span>${dirName(t.dir)}</span> <span class="t-res">${RESULT_LABEL[t.result]}</span><span class="t-pnl ${pcl(t.result)}">${fmtPct2(t.pct)}</span> </div>`;
+      return `<div class="l-row"> <span class="l-dot ${o}"></span><span class="l-date2">${dstr}</span><span class="l-asset2">${slashPair(t.pair)}</span> <span class="l-dir2">${dirName(t.dir)}</span> <span class="l-res2">${RESULT_LABEL[t.result]}</span><span class="l-pnl2 ${pcl(t.result)}">${fmtPct2(t.pct)}</span> </div>`;
     }).join('');
-    return `<div class="mblock"> <div class="mblock-head"><h3>${m.label}<span class="yr">${m.y}</span></h3> <span class="mh-n">${m.total} сделок</span> <span class="mh-split"><span class="w">${m.win} тейк</span> · ${m.be} б/у · <span class="l">${m.sl} стоп</span></span> <span class="mh-pnl ${pos?'pos':'neg'}">${fmtPct(m.pct)}</span></div> <div class="tbl"> <div class="tbl-head"><span>Дата</span><span>Актив</span><span class="h-dir">Напр.</span><span>Результат</span><span class="h-pnl">P&amp;L</span></div>
-        ${rows}
-      </div></div>`;
+    return `<div class="mblock2"> <div class="mblock2-head"><h3>${m.label}<span style="font-family:var(--mono);font-size:11px;color:var(--muted);font-weight:400;margin-left:8px;">${m.y}</span></h3> <span class="mh-n2">${m.total} сделок</span> <span class="mh-pnl2 ${pos?'pos':'neg'}">${fmtPct(m.pct)}</span></div>
+      <div class="ledger-head2"><span></span><span>Дата</span><span>Актив</span><span class="h-dir">Напр.</span><span>Результат</span><span class="h-r">P&amp;L</span></div>
+      ${rows}
+      </div>`;
   }
   const list = document.getElementById('trades-list');
   const render = f => list.innerHTML = (f==='all' ? STATS.months.map(block).join('') : block(STATS.months[+f]));
   render('all');
   fb.addEventListener('click', e => {
-    const c = e.target.closest('.fchip'); if(!c) return;
-    fb.querySelectorAll('.fchip').forEach(x=>x.classList.remove('active')); c.classList.add('active');
+    const c = e.target.closest('.ftab'); if(!c) return;
+    fb.querySelectorAll('.ftab').forEach(x=>x.classList.remove('active')); c.classList.add('active');
     render(c.dataset.f); window.scrollTo({top:0,behavior:'smooth'});
   });
 })();
 
 /* ---------- footer ---------- */
-document.getElementById('footNote').innerHTML = '<b>О методике.</b> Все показатели собраны напрямую из журнала сделок (' + STATS.total + ' записей, апрель — июль 2026) и сверены с помесячными итогами таблицы. P&amp;L — в процентах к депозиту при фиксированном риске 1% на сделку; винрейт — доля сделок, закрытых не по стоп-лоссу. Доходность без реинвестирования, простой суммой помесячных результатов.';
+document.getElementById('footNote').innerHTML = '<b>О методике.</b> Все показатели собраны напрямую из журнала сделок (' + STATS.total + ' записей, апрель — июль 2026) и сверены с помесячными итогами. P&amp;L — в процентах к депозиту при фиксированном риске 1% на сделку; винрейт — доля сделок, закрытых не по стоп-лоссу. Доходность без реинвестирования, простой суммой помесячных результатов.';
 
 /* ---------- tabs ---------- */
 (function(){
-  const tabs = document.querySelectorAll('.nav-link');
+  const tabs = document.querySelectorAll('.tab');
   const views = { overview: document.getElementById('view-overview'), trades: document.getElementById('view-trades'), calc: document.getElementById('view-calc') };
   tabs.forEach(t => t.addEventListener('click', () => {
     tabs.forEach(x=>x.classList.remove('active')); t.classList.add('active');
@@ -687,23 +556,10 @@ document.getElementById('footNote').innerHTML = '<b>О методике.</b> В�
   const curvePts = [1].concat(monthMults);
 
   document.getElementById('calcCurveX').innerHTML = months.map(m=>'<span>'+MONTH_ABBR[m.mo]+'</span>').join('');
-
-  function drawCurve(elId, pts){
-    const W=480,H=170,pl=6,pr=6,pt=16,pb=16;
-    const max=Math.max(...pts), min=Math.min(...pts,0);
-    const x=i=>pl+(W-pl-pr)*(i/(pts.length-1));
-    const y=v=>pt+(H-pt-pb)*(1-(v-min)/((max-min)||1));
-    const line=pts.map((v,i)=>(i?"L":"M")+x(i).toFixed(1)+" "+y(v).toFixed(1)).join(" ");
-    const area=line+` L${x(pts.length-1).toFixed(1)} ${y(min).toFixed(1)} L${x(0).toFixed(1)} ${y(min).toFixed(1)} Z`;
-    const dots=pts.map((v,i)=>`<circle cx="${x(i).toFixed(1)}" cy="${y(v).toFixed(1)}" r="${i===pts.length-1?4:2.6}" fill="${i===pts.length-1?'var(--lime)':'#18181a'}" stroke="var(--lime)" stroke-width="1.6"/>`).join("");
-    document.getElementById(elId).innerHTML =
-      `<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" style="width:100%"> <defs><linearGradient id="lg2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--lime)" stop-opacity="0.22"/><stop offset="1" stop-color="var(--lime)" stop-opacity="0"/></linearGradient></defs>
-      <path d="${area}" fill="url(#lg2)"/> <path d="${line}" fill="none" stroke="var(--lime)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/> <g>${dots}</g> </svg>`;
-  }
-  drawCurve('calcCurve', curvePts);
+  drawCurve('calcCurve', curvePts, false);
 
   document.getElementById('calcTimeline').innerHTML = months.map((m,i) => {
-    return `<div class="tkr" style="grid-template-columns:76px 1fr 90px;"><span class="tkl" style="color:var(--ink)">${m.label}</span><div class="tkt" style="background:var(--bg-2)"><div class="tkf" id="calcBar${i}" style="background:var(--lime)"></div></div><span class="tkn" id="calcAmt${i}" style="color:var(--ink);font-weight:700">$0</span></div>`;
+    return `<div class="month-row"><div class="m-name">${m.label}<span class="yr">${m.y}</span></div><div><div class="m-bar"><i class="w" id="calcBar${i}" style="width:0%"></i></div></div><div><div class="m-pnl pos tnum" id="calcAmt${i}">$0</div></div><div></div></div>`;
   }).join('');
 
   const lastMonth = months[months.length-1];
@@ -729,13 +585,13 @@ document.getElementById('footNote').innerHTML = '<b>О методике.</b> В�
   }
 
   depositInput.addEventListener('input', () => {
-    document.querySelectorAll('#calcQuick .fchip').forEach(b => b.classList.toggle('active', b.dataset.v===depositInput.value));
+    document.querySelectorAll('#calcQuick .qbtn').forEach(b => b.classList.toggle('active', b.dataset.v===depositInput.value));
     recalc();
   });
-  document.querySelectorAll('#calcQuick .fchip').forEach(btn => {
+  document.querySelectorAll('#calcQuick .qbtn').forEach(btn => {
     btn.addEventListener('click', () => {
       depositInput.value = btn.dataset.v;
-      document.querySelectorAll('#calcQuick .fchip').forEach(b => b.classList.toggle('active', b===btn));
+      document.querySelectorAll('#calcQuick .qbtn').forEach(b => b.classList.toggle('active', b===btn));
       recalc();
     });
   });

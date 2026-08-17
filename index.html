@@ -325,7 +325,7 @@ html, body { background: var(--bg); color: var(--ink); font-family: var(--sans);
     <div class="month-list" id="calcTimeline"></div>
   </div>
 
-  <p class="calc-note2">Расчёт — проекция на основе статистики сообщества при пропорциональном масштабировании лота к текущему депозиту (реинвестирование помесячно). На вкладке «Обзор» указан агрегированный результат без реинвестирования — это отдельная методика. Прошлые результаты не гарантируют будущую доходность.</p>
+  <p class="calc-note2">Расчёт — проекция на основе статистики сообщества при фиксированном риске 1% на сделку, без реинвестирования — та же методика, что и на вкладке «Обзор». Прошлые результаты не гарантируют будущую доходность.</p>
 </div>
 
 <div class="site-foot">
@@ -551,11 +551,10 @@ document.getElementById('footNote').innerHTML = '<b>О методике.</b> В�
   }));
 })();
 
-/* ---------- calculator (monthly-compounded projection) ---------- */
+/* ---------- calculator (simple projection, no reinvestment — same methodology as "Обзор") ---------- */
 (function(){
   const months = STATS.months;
-  let cum = 1;
-  const monthMults = months.map(m => { cum *= (1 + m.pct/100); return cum; });
+  const monthMults = months.map((m,i) => 1 + STATS.curve[i+1]/100);
   const curvePts = [1].concat(monthMults);
 
   document.getElementById('calcCurveX').innerHTML = months.map(m=>'<span>'+MONTH_ABBR[m.mo]+'</span>').join('');
